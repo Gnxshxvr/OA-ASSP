@@ -1,0 +1,181 @@
+|--- relative_geometric_query_distance <= 0.00
+|   |--- target_degree <= 19.50
+|   |   |--- num_edges <= 349.50
+|   |   |   |--- target_degree <= 7.50
+|   |   |   |   |--- weight_min <= 2.67
+|   |   |   |   |   |--- degree_product_normalized <= 2.94
+|   |   |   |   |   |   |--- class: Bidirectional Dijkstra
+|   |   |   |   |   |--- degree_product_normalized >  2.94
+|   |   |   |   |   |   |--- class: Dijkstra
+|   |   |   |   |--- weight_min >  2.67
+|   |   |   |   |   |--- degree_product_normalized <= 0.81
+|   |   |   |   |   |   |--- class: Bidirectional Dijkstra
+|   |   |   |   |   |--- degree_product_normalized >  0.81
+|   |   |   |   |   |   |--- class: Bidirectional Dijkstra
+|   |   |   |--- target_degree >  7.50
+|   |   |   |   |--- source_degree <= 6.50
+|   |   |   |   |   |--- degree_difference <= 9.50
+|   |   |   |   |   |   |--- class: Bidirectional Dijkstra
+|   |   |   |   |   |--- degree_difference >  9.50
+|   |   |   |   |   |   |--- class: Dijkstra
+|   |   |   |   |--- source_degree >  6.50
+|   |   |   |   |   |--- weight_min <= 1.81
+|   |   |   |   |   |   |--- class: Bidirectional Dijkstra
+|   |   |   |   |   |--- weight_min >  1.81
+|   |   |   |   |   |   |--- class: Bidirectional Dijkstra
+|   |   |--- num_edges >  349.50
+|   |   |   |--- num_edges <= 957.00
+|   |   |   |   |--- target_degree <= 11.50
+|   |   |   |   |   |--- target_degree <= 3.50
+|   |   |   |   |   |   |--- class: Bidirectional Dijkstra
+|   |   |   |   |   |--- target_degree >  3.50
+|   |   |   |   |   |   |--- class: Bidirectional Dijkstra
+|   |   |   |   |--- target_degree >  11.50
+|   |   |   |   |   |--- source_degree <= 5.50
+|   |   |   |   |   |   |--- class: Bidirectional Dijkstra
+|   |   |   |   |   |--- source_degree >  5.50
+|   |   |   |   |   |   |--- class: Bidirectional Dijkstra
+|   |   |   |--- num_edges >  957.00
+|   |   |   |   |--- target_degree <= 13.50
+|   |   |   |   |   |--- degree_difference <= 0.50
+|   |   |   |   |   |   |--- class: Bidirectional Dijkstra
+|   |   |   |   |   |--- degree_difference >  0.50
+|   |   |   |   |   |   |--- class: Bidirectional Dijkstra
+|   |   |   |   |--- target_degree >  13.50
+|   |   |   |   |   |--- degree_min <= 4.50
+|   |   |   |   |   |   |--- class: Bidirectional Dijkstra
+|   |   |   |   |   |--- degree_min >  4.50
+|   |   |   |   |   |   |--- class: Bidirectional Dijkstra
+|   |--- target_degree >  19.50
+|   |   |--- degree_mean <= 11.21
+|   |   |   |--- target_degree <= 24.50
+|   |   |   |   |--- weight_variance <= 809.79
+|   |   |   |   |   |--- source_degree <= 19.50
+|   |   |   |   |   |   |--- class: Dijkstra
+|   |   |   |   |   |--- source_degree >  19.50
+|   |   |   |   |   |   |--- class: Bidirectional Dijkstra
+|   |   |   |   |--- weight_variance >  809.79
+|   |   |   |   |   |--- target_degree <= 22.50
+|   |   |   |   |   |   |--- class: Bidirectional Dijkstra
+|   |   |   |   |   |--- target_degree >  22.50
+|   |   |   |   |   |   |--- class: Dijkstra
+|   |   |   |--- target_degree >  24.50
+|   |   |   |   |--- target_degree <= 25.50
+|   |   |   |   |   |--- class: Dijkstra
+|   |   |   |   |--- target_degree >  25.50
+|   |   |   |   |   |--- target_degree <= 33.50
+|   |   |   |   |   |   |--- class: Dijkstra
+|   |   |   |   |   |--- target_degree >  33.50
+|   |   |   |   |   |   |--- class: Dijkstra
+|   |   |--- degree_mean >  11.21
+|   |   |   |--- weight_min <= 1.56
+|   |   |   |   |--- degree_difference <= 21.50
+|   |   |   |   |   |--- num_edges <= 709.50
+|   |   |   |   |   |   |--- class: Bidirectional Dijkstra
+|   |   |   |   |   |--- num_edges >  709.50
+|   |   |   |   |   |   |--- class: Bidirectional Dijkstra
+|   |   |   |   |--- degree_difference >  21.50
+|   |   |   |   |   |--- degree_difference <= 33.50
+|   |   |   |   |   |   |--- class: Bidirectional Dijkstra
+|   |   |   |   |   |--- degree_difference >  33.50
+|   |   |   |   |   |   |--- class: Dijkstra
+|   |   |   |--- weight_min >  1.56
+|   |   |   |   |--- source_degree <= 11.50
+|   |   |   |   |   |--- class: Dijkstra
+|   |   |   |   |--- source_degree >  11.50
+|   |   |   |   |   |--- class: Dijkstra
+|--- relative_geometric_query_distance >  0.00
+|   |--- weight_variance <= 0.00
+|   |   |--- source_target_euclidean_distance <= 0.08
+|   |   |   |--- num_edges <= 442.50
+|   |   |   |   |--- degree_product_normalized <= 1.25
+|   |   |   |   |   |--- degree_product_normalized <= 0.64
+|   |   |   |   |   |   |--- class: Dijkstra
+|   |   |   |   |   |--- degree_product_normalized >  0.64
+|   |   |   |   |   |   |--- class: Dijkstra
+|   |   |   |   |--- degree_product_normalized >  1.25
+|   |   |   |   |   |--- degree_product_normalized <= 1.47
+|   |   |   |   |   |   |--- class: Bidirectional Dijkstra
+|   |   |   |   |   |--- degree_product_normalized >  1.47
+|   |   |   |   |   |   |--- class: Dijkstra
+|   |   |   |--- num_edges >  442.50
+|   |   |   |   |--- source_degree <= 4.50
+|   |   |   |   |   |--- source_target_euclidean_distance <= 0.05
+|   |   |   |   |   |   |--- class: Dijkstra
+|   |   |   |   |   |--- source_target_euclidean_distance >  0.05
+|   |   |   |   |   |   |--- class: Bidirectional Dijkstra
+|   |   |   |   |--- source_degree >  4.50
+|   |   |   |   |   |--- source_target_euclidean_distance <= 0.02
+|   |   |   |   |   |   |--- class: Dijkstra
+|   |   |   |   |   |--- source_target_euclidean_distance >  0.02
+|   |   |   |   |   |   |--- class: Bidirectional Dijkstra
+|   |   |--- source_target_euclidean_distance >  0.08
+|   |   |   |--- degree_variance <= 1.27
+|   |   |   |   |--- target_degree <= 3.50
+|   |   |   |   |   |--- source_target_euclidean_distance <= 0.57
+|   |   |   |   |   |   |--- class: Bidirectional Dijkstra
+|   |   |   |   |   |--- source_target_euclidean_distance >  0.57
+|   |   |   |   |   |   |--- class: Bidirectional Dijkstra
+|   |   |   |   |--- target_degree >  3.50
+|   |   |   |   |   |--- source_target_euclidean_distance <= 0.79
+|   |   |   |   |   |   |--- class: Bidirectional Dijkstra
+|   |   |   |   |   |--- source_target_euclidean_distance >  0.79
+|   |   |   |   |   |   |--- class: Dijkstra
+|   |   |   |--- degree_variance >  1.27
+|   |   |   |   |--- weight_mean <= 0.19
+|   |   |   |   |   |--- source_target_euclidean_distance <= 1.05
+|   |   |   |   |   |   |--- class: Bidirectional Dijkstra
+|   |   |   |   |   |--- source_target_euclidean_distance >  1.05
+|   |   |   |   |   |   |--- class: Dijkstra
+|   |   |   |   |--- weight_mean >  0.19
+|   |   |   |   |   |--- target_degree <= 7.50
+|   |   |   |   |   |   |--- class: Bidirectional Dijkstra
+|   |   |   |   |   |--- target_degree >  7.50
+|   |   |   |   |   |   |--- class: Bidirectional Dijkstra
+|   |--- weight_variance >  0.00
+|   |   |--- degree_variance <= 0.89
+|   |   |   |--- target_degree <= 4.50
+|   |   |   |   |--- relative_geometric_query_distance <= 0.59
+|   |   |   |   |   |--- source_target_euclidean_distance <= 0.83
+|   |   |   |   |   |   |--- class: Dijkstra
+|   |   |   |   |   |--- source_target_euclidean_distance >  0.83
+|   |   |   |   |   |   |--- class: Bidirectional Dijkstra
+|   |   |   |   |--- relative_geometric_query_distance >  0.59
+|   |   |   |   |   |--- relative_geometric_query_distance <= 0.61
+|   |   |   |   |   |   |--- class: Dijkstra
+|   |   |   |   |   |--- relative_geometric_query_distance >  0.61
+|   |   |   |   |   |   |--- class: Dijkstra
+|   |   |   |--- target_degree >  4.50
+|   |   |   |   |--- degree_product_normalized <= 1.18
+|   |   |   |   |   |--- relative_geometric_query_distance <= 0.23
+|   |   |   |   |   |   |--- class: Dijkstra
+|   |   |   |   |   |--- relative_geometric_query_distance >  0.23
+|   |   |   |   |   |   |--- class: Dijkstra
+|   |   |   |   |--- degree_product_normalized >  1.18
+|   |   |   |   |   |--- source_target_euclidean_distance <= 0.62
+|   |   |   |   |   |   |--- class: Dijkstra
+|   |   |   |   |   |--- source_target_euclidean_distance >  0.62
+|   |   |   |   |   |   |--- class: Dijkstra
+|   |   |--- degree_variance >  0.89
+|   |   |   |--- source_target_euclidean_distance <= 0.13
+|   |   |   |   |--- degree_difference <= 0.50
+|   |   |   |   |   |--- relative_geometric_query_distance <= 0.03
+|   |   |   |   |   |   |--- class: Dijkstra
+|   |   |   |   |   |--- relative_geometric_query_distance >  0.03
+|   |   |   |   |   |   |--- class: Dijkstra
+|   |   |   |   |--- degree_difference >  0.50
+|   |   |   |   |   |--- relative_geometric_query_distance <= 0.06
+|   |   |   |   |   |   |--- class: Bidirectional Dijkstra
+|   |   |   |   |   |--- relative_geometric_query_distance >  0.06
+|   |   |   |   |   |   |--- class: Dijkstra
+|   |   |   |--- source_target_euclidean_distance >  0.13
+|   |   |   |   |--- target_degree <= 7.50
+|   |   |   |   |   |--- degree_max <= 8.50
+|   |   |   |   |   |   |--- class: Bidirectional Dijkstra
+|   |   |   |   |   |--- degree_max >  8.50
+|   |   |   |   |   |   |--- class: Bidirectional Dijkstra
+|   |   |   |   |--- target_degree >  7.50
+|   |   |   |   |   |--- source_target_euclidean_distance <= 0.79
+|   |   |   |   |   |   |--- class: Bidirectional Dijkstra
+|   |   |   |   |   |--- source_target_euclidean_distance >  0.79
+|   |   |   |   |   |   |--- class: Dijkstra

@@ -1,0 +1,10 @@
+quantity,value_pct
+per-row benchmark-median relative IQR (median),14.390197164800734
+per-row benchmark-median relative IQR (p90),57.472520865208956
+per-row benchmark-median relative IQR (max),434.533783867109
+library aggregate pass-to-pass dispersion,16.323201995608645
+compiled aggregate pass-to-pass dispersion,9.401638473377469
+"PRIMARY noise floor (max of median IQR and mode dispersion, applied per aggregate)",16.323201995608645
+"library (primary, task variant)",40,0,0.0,0.0,16.323201995608645,True
+"compiled (primary, task variant)",40,3,1.4858965296298265,0.13962565792569825,9.401638473377469,True
+compiled (secondary conservative sensitivity),40,4,2.4189974647015333,0.22730661643963224,9.401638473377469,True

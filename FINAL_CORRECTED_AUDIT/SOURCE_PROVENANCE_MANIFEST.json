@@ -1,0 +1,424 @@
+{
+  "generated_utc": "2026-10-03T19:50:51.620653+00:00",
+  "generator": "scripts/generate_lock_manifests.py",
+  "lock_timestamp_utc": "2026-10-03T19:50:51.620867+00:00",
+  "experiment_id": "stage20_corrected_20260923_092749",
+  "historical_experiment_id": "stage20_scaleup_48g_20260920_215427",
+  "config_hash": "91cef3a3dbfa46115869c72f596d9c2b7f266e4c711d0d89dac14ad498fbea62",
+  "historical_source_identity": {
+    "label": "HISTORICAL EXPERIMENT SOURCE IDENTITY",
+    "source_hash": "c668df6b5e2a2034892a9d6089683f2ca50a05c77fc70ed35d01e49db8252721",
+    "source_files_hashed": 72,
+    "recorded_at_run_utc": "2026-09-23T04:02:53.018660+00:00",
+    "status": "IMMUTABLE EVIDENCE - retained verbatim, never replaced",
+    "description": "SHA-256 recorded by scripts/run_stage20_corrected.py at run time over the 72 source files then present. This hash does NOT reproduce from the current tree: two source files were edited after the run (see post_run_source_edits). It is preserved as historical provenance, not as a claim about the current tree.",
+    "reproduces_from_current_tree": false
+  },
+  "current_source_identity": {
+    "label": "CURRENT FROZEN REPOSITORY SOURCE IDENTITY",
+    "source_hash": "9759103dd1cb90826a9f64ad876609ba973bc862331c9f5bad0e26f4f6a5ff77",
+    "source_files_hashed": 75,
+    "status": "REPRODUCIBLE - recomputes from the frozen tree as committed",
+    "description": "SHA-256 of the frozen repository source tree, computed with the identical algorithm used at run time. This is the reproducible identity of the final frozen repository. It does NOT claim the current tree was exactly the source tree used for the original run; see post_run_source_edits.",
+    "reproduces_from_current_tree": true
+  },
+  "post_run_source_edits": [
+    {
+      "path": "scripts/verify_corrected_stage20.py",
+      "mtime": "2026-09-23T09:27:04",
+      "note": "created/edited at the end of the corrected run (integrity audit script)"
+    },
+    {
+      "path": "scripts/analyze_corrected_stage20.py",
+      "mtime": "2026-09-30T20:46:24",
+      "note": "edited during the P0 documentation pass (regime/crossover labeling)"
+    },
+    {
+      "path": "scripts/analyze_corrected_stage20.py",
+      "mtime": "2026-10-04 (closure pass)",
+      "note": "reproduction-safety fix: run-scoped output + --force guard. No scientific output changes; verified by post-fix verification."
+    },
+    {
+      "path": "scripts/generate_lock_manifests.py",
+      "mtime": "2026-10-04 (closure pass)",
+      "note": "new in the closure pass; generates this manifest and LOCK_CHECKSUMS.txt"
+    }
+  ],
+  "source_file_hashes": [
+    {
+      "path": "oa_assp/__init__.py",
+      "sha256": "cc16178000cffba0ae32f4a0aba33ec3e04fa4fea02aa868c15b8659285958d5",
+      "size_bytes": 102
+    },
+    {
+      "path": "oa_assp/algorithms/__init__.py",
+      "sha256": "1d970504603664a11ebf233695cc78027666844e53d5dab28db14f948c68d567",
+      "size_bytes": 589
+    },
+    {
+      "path": "oa_assp/algorithms/astar.py",
+      "sha256": "19d257b55cdedce1b3ac271aaab4ff25179b59e3b54a1c18fb96f0830fcf2508",
+      "size_bytes": 6411
+    },
+    {
+      "path": "oa_assp/algorithms/base.py",
+      "sha256": "691d210a97a0f6205384914545cb5a2a54b9fd5c57b509bb8c65c14be1080492",
+      "size_bytes": 1987
+    },
+    {
+      "path": "oa_assp/algorithms/bellman_ford.py",
+      "sha256": "0854931e0e12004989f1b89ac02aade489c307eb169da94466d54c0c8b2e5ee9",
+      "size_bytes": 4908
+    },
+    {
+      "path": "oa_assp/algorithms/bidirectional_dijkstra.py",
+      "sha256": "e22f9dfcc99357b41190820444e6c9cb3f3eaaf68b75dab5ac744773e258a864",
+      "size_bytes": 6968
+    },
+    {
+      "path": "oa_assp/algorithms/dijkstra.py",
+      "sha256": "9105aacfcdbef6cd9c28a9d2ad4f3a27ad8ea330fd096db21941c440657d4d0d",
+      "size_bytes": 3845
+    },
+    {
+      "path": "oa_assp/analysis/__init__.py",
+      "sha256": "17449035a0dbfc2c7cf31932992ccb4003a3ff14b3e9f50606e4c7700348f756",
+      "size_bytes": 992
+    },
+    {
+      "path": "oa_assp/analysis/bootstrap.py",
+      "sha256": "e41e802ef7bc3a56b82d70324a8a5607ed7f422e2b0ef88b13c0bbeb08b6d118",
+      "size_bytes": 7505
+    },
+    {
+      "path": "oa_assp/analysis/capture.py",
+      "sha256": "d4c92a5c0b9a9d02105fd41d992c2c64e90fe6339ed4a2e80090c6f791faf9b4",
+      "size_bytes": 22306
+    },
+    {
+      "path": "oa_assp/analysis/corrected_plots.py",
+      "sha256": "9e2f6e3d12aa95b61585bc10c985c3e5c3ae401a596b085939646adf9e8f87d1",
+      "size_bytes": 11673
+    },
+    {
+      "path": "oa_assp/analysis/feature_tiers.py",
+      "sha256": "4b807190bd4bfe6193ff648eb0323c904c5591df13432de2388e6d4a684777a4",
+      "size_bytes": 11447
+    },
+    {
+      "path": "oa_assp/analysis/plots.py",
+      "sha256": "545d24afe60fded8e1a8b16119032fa8eeda71e2b85aea7fec9adc9d8cd48ed0",
+      "size_bytes": 10412
+    },
+    {
+      "path": "oa_assp/analysis/tables.py",
+      "sha256": "033c5bb8c3e3b896b678da4da9d43a5b9e3df36e0a4cef712ee63b1c3d4839f9",
+      "size_bytes": 8221
+    },
+    {
+      "path": "oa_assp/analysis/workload.py",
+      "sha256": "3bead017f218b5d60a1fa3648c2753388f034343f45ca362c99c7092fbddda84",
+      "size_bytes": 8402
+    },
+    {
+      "path": "oa_assp/benchmark/__init__.py",
+      "sha256": "79af614c852422c6d5c2135dda6fe2db885ab8effc0b5db9f1d7811352cf8399",
+      "size_bytes": 2300
+    },
+    {
+      "path": "oa_assp/benchmark/adaptive.py",
+      "sha256": "964c24a7fcfb1b0c603aba1de54370a35b470ee9439696e8fbe39e651091231a",
+      "size_bytes": 12876
+    },
+    {
+      "path": "oa_assp/benchmark/correctness.py",
+      "sha256": "e6645296f859b935393e2348af3e3bc356be7073e31bc7ddc48e7e29888b6ffb",
+      "size_bytes": 5551
+    },
+    {
+      "path": "oa_assp/benchmark/counters.py",
+      "sha256": "778bb1ab8a702a2c158b6fa8ca49f72bcda3e31a29b7baf3ff9353379f3ffcf2",
+      "size_bytes": 174
+    },
+    {
+      "path": "oa_assp/benchmark/oracle.py",
+      "sha256": "8f798eb70f24464ff3b217da88c0a53618bf14e750211ea262938b36e7cd3486",
+      "size_bytes": 12311
+    },
+    {
+      "path": "oa_assp/benchmark/runner.py",
+      "sha256": "19459b08f7abe9ca9470437f28d9552a0b7c394884f84e044ec3d68f2eb1b2ac",
+      "size_bytes": 12146
+    },
+    {
+      "path": "oa_assp/benchmark/timing.py",
+      "sha256": "8aed8a65db3371ea0ef35fb9f97158b8c8a66c83e1281c92ddbd23f0246b0818",
+      "size_bytes": 11715
+    },
+    {
+      "path": "oa_assp/features/__init__.py",
+      "sha256": "eb2a490bac6af1a517b110560d18eec92c6b7c51d1e7168d9bef5019a916393e",
+      "size_bytes": 865
+    },
+    {
+      "path": "oa_assp/features/cheap.py",
+      "sha256": "51b3f980cefe3b23c60c532af9fd76cd12e67b4e926f46c4441dd91e0b44ccb8",
+      "size_bytes": 1668
+    },
+    {
+      "path": "oa_assp/features/extractor.py",
+      "sha256": "017504bfbacd9a73b14e8c01b8d6a22c0c215af66c64acf39aee1ebdadcb9c56",
+      "size_bytes": 3588
+    },
+    {
+      "path": "oa_assp/features/linear_scan.py",
+      "sha256": "c7aab3c662a2a7e284b208987b8d1d5dfa50ef8428c0f562906e322ef229ac59",
+      "size_bytes": 3931
+    },
+    {
+      "path": "oa_assp/features/schema.py",
+      "sha256": "fa9577b7b58fde184d1fa5a13647609e4fe95e4f4fb2ca9aa553c3dde94aae86",
+      "size_bytes": 5819
+    },
+    {
+      "path": "oa_assp/features/structural.py",
+      "sha256": "912d782b357c8f4af7e12c69670411d151e358186461a79f8f2e6702989ce0ad",
+      "size_bytes": 2970
+    },
+    {
+      "path": "oa_assp/graphs/__init__.py",
+      "sha256": "efb1781641f712f17d3972c03fc190bbb4f30db4925b809fb9cd747b46a3989d",
+      "size_bytes": 721
+    },
+    {
+      "path": "oa_assp/graphs/base.py",
+      "sha256": "26116ed3a1d48cd8cce9e4b22e7a8fcd855f8623483e8466d569ce82d0a43704",
+      "size_bytes": 3563
+    },
+    {
+      "path": "oa_assp/graphs/geometric.py",
+      "sha256": "982b3918de5d17198595b1dd9731deb115ba90570fe20ecf2adf3f56c7615468",
+      "size_bytes": 3733
+    },
+    {
+      "path": "oa_assp/graphs/queries.py",
+      "sha256": "1d405fd88a8e8ab8a07e0c6beb6e584199b5a495b3cc0ce861fbccac0575928a",
+      "size_bytes": 6736
+    },
+    {
+      "path": "oa_assp/graphs/random.py",
+      "sha256": "5786e39fbc388b3e3ad09d3d468feacdab9a0d5c51477cfdedec4d5207311c95",
+      "size_bytes": 3779
+    },
+    {
+      "path": "oa_assp/graphs/scale_free.py",
+      "sha256": "b90ab53073dedef26132d232ba8602c6ed217e879e056add07702575eca85763",
+      "size_bytes": 3384
+    },
+    {
+      "path": "oa_assp/graphs/weights.py",
+      "sha256": "c8e75c7ccc7742db2d17052ff670ff7596b75d99c645c64a9b8f0babb969d0b8",
+      "size_bytes": 5422
+    },
+    {
+      "path": "oa_assp/scripts/run_experiments.py",
+      "sha256": "2d929d3bf0644c46a9af89893c36fdc2050058dc2e4a9fbae5cf7b7045bb7ab9",
+      "size_bytes": 15721
+    },
+    {
+      "path": "oa_assp/scripts/run_selector_pipeline.py",
+      "sha256": "2936f3d073e2176b17c10bbe636722538eb4a739cb0247cab18a7e37a39f9639",
+      "size_bytes": 5176
+    },
+    {
+      "path": "oa_assp/scripts/run_smoke_test.py",
+      "sha256": "460e3781ab02fda961e928dfae2228d42c87038982642c923e345c65a1ec22e7",
+      "size_bytes": 4761
+    },
+    {
+      "path": "oa_assp/selector/__init__.py",
+      "sha256": "cf3b42eeaccbabe7d59653061f27dc731453b16cf9b554fefbf084297ec1479a",
+      "size_bytes": 676
+    },
+    {
+      "path": "oa_assp/selector/baselines.py",
+      "sha256": "5f16237e94be25a468e50d8b2257f46a63381b61eb77f6a04d1b0a2c8b8a35ae",
+      "size_bytes": 4378
+    },
+    {
+      "path": "oa_assp/selector/dataset.py",
+      "sha256": "842970201c5c88c82103d2d64bb9ccb172d374801dcdce8f7e53b8139941765f",
+      "size_bytes": 8542
+    },
+    {
+      "path": "oa_assp/selector/decision_tree.py",
+      "sha256": "9cccad5d406d21df78bde814727530030e1b39b46a15e60072b2771ea67635d4",
+      "size_bytes": 14070
+    },
+    {
+      "path": "oa_assp/selector/generalization.py",
+      "sha256": "2e6de8ea791155fea720993cf643ea5bfd44c3d32e7d73a8bb72160f5847c7c6",
+      "size_bytes": 11841
+    },
+    {
+      "path": "oa_assp/selector/tuning.py",
+      "sha256": "3ece243f943cf1061fabf5d4956019b025724d65321016d3242ec6492c605fc7",
+      "size_bytes": 6039
+    },
+    {
+      "path": "oa_assp/selector/validation.py",
+      "sha256": "630bffb7345f3d1194f65f78b494a233ef96ecd0a05f522da6ea6c787237c4ce",
+      "size_bytes": 3863
+    },
+    {
+      "path": "oa_assp/tests/test_astar.py",
+      "sha256": "f33e84d6281776543dfc1f4320a102a022df240b8fc7e0a758e1b6bf60bbd92f",
+      "size_bytes": 3764
+    },
+    {
+      "path": "oa_assp/tests/test_astar_cached.py",
+      "sha256": "fffd4a9aa4dd25237c6ac258b5b0c77e3ce992eaf55ac7e4a46ab2cdaa1d367b",
+      "size_bytes": 4616
+    },
+    {
+      "path": "oa_assp/tests/test_bellman_ford.py",
+      "sha256": "518a1f2bc0b3258bf95854d222072f23b3cc1bbc89cad4e3e5ee842cd1da99bb",
+      "size_bytes": 2038
+    },
+    {
+      "path": "oa_assp/tests/test_benchmark.py",
+      "sha256": "86bf06135f600a6907cc910732c6d25b57b253a485922cda504e2eb91e648ce3",
+      "size_bytes": 3918
+    },
+    {
+      "path": "oa_assp/tests/test_bidirectional.py",
+      "sha256": "b9819d109b0ebecfa11921eee92944a8553148526efe4d50ac8be2333373b553",
+      "size_bytes": 2999
+    },
+    {
+      "path": "oa_assp/tests/test_capture.py",
+      "sha256": "b72921f661e744f84d0204d1770ae60a067db7d9b972a983a6c3a37fa1569b35",
+      "size_bytes": 4468
+    },
+    {
+      "path": "oa_assp/tests/test_correctness.py",
+      "sha256": "30148ff82720543ad793fab0b6c521a7a65ed97c3057a8c066272442954b5f1b",
+      "size_bytes": 2831
+    },
+    {
+      "path": "oa_assp/tests/test_dijkstra.py",
+      "sha256": "6180002e93a306a685e48203f1afc579ee2f73c300ff6ff3320a9b2befe7dc2f",
+      "size_bytes": 2681
+    },
+    {
+      "path": "oa_assp/tests/test_features.py",
+      "sha256": "f7dc0921f3b857c5be302b36d275a477c8838873343310e73f3605007b44b346",
+      "size_bytes": 3657
+    },
+    {
+      "path": "oa_assp/tests/test_graphs.py",
+      "sha256": "141364973e3ed895433a30b9015e4bf09778d078ccf410c22bf4303304e9a624",
+      "size_bytes": 2594
+    },
+    {
+      "path": "oa_assp/tests/test_oracle.py",
+      "sha256": "4b448059617c22e720066c9ed01b229b3a6cc040526cd9170470ee2527837e15",
+      "size_bytes": 3384
+    },
+    {
+      "path": "oa_assp/tests/test_queries.py",
+      "sha256": "0a8cb7cff2d3f6cccdd4920eb308baf0b7be9128c6d2ef4eecff3b31bba3aacf",
+      "size_bytes": 2111
+    },
+    {
+      "path": "oa_assp/tests/test_sbs_training_only.py",
+      "sha256": "ffa8d162f2556d58fd8120b2cdb63804e5d21df2296510d6b555967e6ab9cdfa",
+      "size_bytes": 4193
+    },
+    {
+      "path": "oa_assp/tests/test_selector.py",
+      "sha256": "d90f96c3a2798fd3eb82d7e52588f409ecbe52c2f5d7ce4729abdc7b55deeb01",
+      "size_bytes": 4782
+    },
+    {
+      "path": "oa_assp/tests/test_timeout_and_validity.py",
+      "sha256": "8aa974bf2d1c39b9538128544d392b85f6e539c2a8e3ea8cbc39f10f0efe02e0",
+      "size_bytes": 5775
+    },
+    {
+      "path": "scripts/analyze_corrected_stage20.py",
+      "sha256": "1fa9ae1894a024163ab3902ae5b73e6483157ee5337f3f179c72233221ac8239",
+      "size_bytes": 35551
+    },
+    {
+      "path": "scripts/generate_final_lock_manifest.py",
+      "sha256": "1f759648230409040788853966b1544de7b061cb11170ae47a6623cc847e4d83",
+      "size_bytes": 8663
+    },
+    {
+      "path": "scripts/generate_lock_manifests.py",
+      "sha256": "68f77721d9dd31fd38c33e910d4d44f21aa2bfe4a1bf51850d349a61f692ea1b",
+      "size_bytes": 11572
+    },
+    {
+      "path": "scripts/run_experiments.py",
+      "sha256": "5eadffb0086e5289f5b8f9ea92e1e21349d91d7a81d7aa23ff499484c1dab9c8",
+      "size_bytes": 291
+    },
+    {
+      "path": "scripts/run_preflight_stage20a.py",
+      "sha256": "a8e7ef1105c2e6a0975185ac735dc1307cd2eb2bf4f2a7a1df50f82768f91e99",
+      "size_bytes": 18281
+    },
+    {
+      "path": "scripts/run_selector_pipeline.py",
+      "sha256": "d6d5dff7e3cd630dc34ca6bfd6f6142ff62f03adabb20741f078a49dd4b457e7",
+      "size_bytes": 310
+    },
+    {
+      "path": "scripts/run_smoke_test.py",
+      "sha256": "72e8a6cbfafadd51a7bb5d2701ea6878f996d72f080de143f7ecbdbd78f0514f",
+      "size_bytes": 230
+    },
+    {
+      "path": "scripts/run_stage20_corrected.py",
+      "sha256": "d6d24c2ca5ab7dee3129a156dd5db67200771902db9864e38801edfd8e6aa2c4",
+      "size_bytes": 66928
+    },
+    {
+      "path": "scripts/run_stage20_experiment.py",
+      "sha256": "f816d19650fc4582085ed6a767167bf1316095e73e7e0fe3aa510b691e833937",
+      "size_bytes": 23223
+    },
+    {
+      "path": "scripts/setup_scaleup_manifest.py",
+      "sha256": "c55b5b33c27918cf5aecb2628100205191c46dbc6081818304eeabc918042aab",
+      "size_bytes": 9010
+    },
+    {
+      "path": "scripts/verify_and_finalize_stage20.py",
+      "sha256": "6b80edbf8968526d6fa3e02809060c1a2400cee7df875861db38927414c7f55d",
+      "size_bytes": 8420
+    },
+    {
+      "path": "scripts/verify_corrected_stage20.py",
+      "sha256": "e388b83615be2c752f3d78c4806dfa4e26ad341489e050b011659dd0d561f3a8",
+      "size_bytes": 18960
+    },
+    {
+      "path": "scripts/verify_lock_manifests.py",
+      "sha256": "94c8ee759fa51de8abc3fca142fe78fdcb30a07124567c0e8d9965174dfb86f6",
+      "size_bytes": 10254
+    },
+    {
+      "path": "configs/experiment_corrected_48g.yaml",
+      "sha256": "3e39da76e74fb0c9b67b472d88883fc4fe362f6004e0ad1625a8e6d47b77ced9",
+      "size_bytes": 2289
+    },
+    {
+      "path": "configs/graph_split_manifest_48g.csv",
+      "sha256": "16a9012cfbad947f2176b884a4a8ada370859941e04faaccce74f413c16178dd",
+      "size_bytes": 2480
+    }
+  ]
+}

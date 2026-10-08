@@ -1,0 +1,38 @@
+================================================================================================
+OA-ASSP -- CORRECTED STAGE 20 INTEGRITY AUDIT
+================================================================================================
+Experiment: stage20_corrected_20260923_092749
+   PASS  original_stage20_immutable: 52 historical files byte-identical to the pre-experiment baseline
+   PASS  raw_shape: 72000 rows = 24000 queries x 3 algorithms on 48 graphs
+   PASS  timeout_semantics: 0 timeouts; none reported as success/valid (violations=0)
+   PASS  validity_derived: 0 invalid rows, all with a failure reason (violations=0, unlabelled=0)
+   PASS  runtime_positivity: 72000 rows with a positive median runtime
+   PASS  sbs_training_only: reference=32 train graphs, disjoint from 8 validation and 8 test graphs; selected policy Always-Bidirectional-Dijkstra
+   PASS  sbs_replayable_from_raw: argmin over 16000 training queries reproduces Always-Bidirectional-Dijkstra; all three fixed-policy training totals match the manifest to 1e-6
+   PASS  tier_hyperparameters_identical: all tiers use max_depth=6 min_samples_leaf=3 as selected on validation
+   PASS  q1_accounting: Q=1 for geometric_V40_D12_s120: graph features charged once (1051.10 us), query features, vector assembly and selection charged once each for exactly one query
+   PASS  cost_traceability: every per-graph C_SBS and C_VBS at Q=500 recomputes exactly from the raw benchmark medians
+   PASS  oracle_gap_crosscheck_recorded: Q=500 gap: benchmark medians 122.523 ms vs paired single-shot -4.547 ms
+   PASS  generalization_attribution: every fold records its feature tier; tiers [0, 1] each contribute 24 cell folds and 3 family folds
+   PASS  reported_values_match_frozen_tables: the Q8/Q9 generalization numbers written into the report artifacts recompute from the frozen fold table for the primary tier
+   PASS  artifact_completeness: 9 corrected figures, all named fig_c*; no historical figure names present
+   PASS  no_unreproduced_crossover_claimed: 0 of 40 cells show a gain; the historical single 37 us cell is absent from the corrected record
+
+================================================================================================
+ALL 15 INTEGRITY CHECKS PASSED
+================================================================================================
+   [x] original_stage20_immutable
+   [x] raw_shape
+   [x] timeout_semantics
+   [x] validity_derived
+   [x] runtime_positivity
+   [x] sbs_training_only
+   [x] sbs_replayable_from_raw
+   [x] tier_hyperparameters_identical
+   [x] q1_accounting
+   [x] cost_traceability
+   [x] oracle_gap_crosscheck_recorded
+   [x] generalization_attribution
+   [x] reported_values_match_frozen_tables
+   [x] artifact_completeness
+   [x] no_unreproduced_crossover_claimed

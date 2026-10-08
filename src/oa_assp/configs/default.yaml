@@ -1,0 +1,50 @@
+# OA-ASSP Configuration File
+# Overhead-Aware Adaptive Algorithm Selection for Shortest Paths
+
+seeds:
+  master_seed: 42
+  graph_seed: 1001
+  query_seed: 2001
+  selector_seed: 3001
+  bootstrap_seed: 4001
+
+graphs:
+  sizes:
+    small: 500
+    medium: 1000
+    large: 2000
+    extra_large: 5000
+  average_degrees: [4, 8, 16, 32]
+  families: ["random", "geometric", "scale_free"]
+  weights:
+    min_weight: 1.0
+    max_weight: 100.0
+    geometric_multipliers: [1.0, 1.25, 1.5, 2.0, 3.0]
+    geometric_noise_epsilon: 0.1
+
+queries:
+  count_per_graph: 500
+  distance_categories:
+    short_percentile: 0.25
+    long_percentile: 0.75
+  workload_q_checkpoints: [1, 10, 50, 100, 500]
+
+timing:
+  warmup_runs: 1
+  repetitions: 5  # k=5
+  timeout_seconds: 30.0
+
+evaluation:
+  near_tie_epsilon: 0.05
+  near_tie_sensitivities: [0.01, 0.05, 0.10]
+  distance_tolerance: 1.0e-9
+  train_split: 0.70
+  val_split: 0.15
+  test_split: 0.15
+  bootstrap_samples: 1000
+  confidence_level: 0.95
+
+feature_tiers:
+  tier_0: ["num_nodes", "num_edges", "density", "heuristic_available"]
+  tier_1: ["avg_degree", "degree_variance", "weight_mean", "weight_variance", "weight_min", "weight_max", "heuristic_quality"]
+  tier_2: ["clustering_coefficient", "approx_diameter"]

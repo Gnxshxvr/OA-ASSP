@@ -1,0 +1,12 @@
+split,graph_count,instance_count,policy,fixed_policy_total_cost_s
+train,32,16000,Always-Dijkstra,6.703844501345884
+train,32,16000,Always-Bidirectional-Dijkstra,3.670821901061572
+train,32,16000,Always-A*,7.334904606337659
+validation,8,4000,Always-Dijkstra,1.6720654011005536
+validation,8,4000,Always-Bidirectional-Dijkstra,1.0171449021436274
+validation,8,4000,Always-A*,1.9846104034222662
+test,8,4000,Always-Dijkstra,1.6681323004886508
+test,8,4000,Always-Bidirectional-Dijkstra,1.0642001990927383
+test,8,4000,Always-A*,1.9217799018369988
+sbs_source,,,"training_graphs_only (32 graphs, 16,000 instances)",
+sbs_selected_policy,,,Always-Bidirectional-Dijkstra,

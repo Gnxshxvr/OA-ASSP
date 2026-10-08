@@ -1,0 +1,117 @@
+\relax 
+\citation{dijkstra1959,bast2016}
+\citation{dijkstra1959}
+\citation{nicholson1966,pohl1971}
+\citation{hart1968}
+\citation{rice1976}
+\citation{xu2008}
+\citation{bischl2016}
+\citation{kotthoff2014}
+\citation{gebser2014}
+\citation{lindauer2015}
+\citation{kerschke2019}
+\citation{gholami2026}
+\citation{vanderblom2026}
+\@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}{}\protected@file@percent }
+\citation{rice1976}
+\citation{xu2008,hutter2014}
+\citation{bischl2016}
+\citation{kotthoff2014}
+\citation{gebser2014}
+\citation{lindauer2015}
+\citation{kerschke2019}
+\citation{hutter2014}
+\citation{vanderblom2026}
+\citation{dijkstra1959}
+\citation{nicholson1966,pohl1971}
+\citation{hart1968}
+\citation{goldberg2005}
+\citation{bast2016}
+\citation{gholami2026}
+\@writefile{toc}{\contentsline {section}{\numberline {II}Related Work}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-A}}Algorithm Selection and Empirical Algorithmics}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-B}}Feature-Cost and Budget-Aware Selection}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-C}}Shortest-Path Solvers and Instance Landscapes}{2}{}\protected@file@percent }
+\citation{bischl2016}
+\@writefile{toc}{\contentsline {section}{\numberline {III}Cost Model and Evaluation Framework}{3}{}\protected@file@percent }
+\newlabel{sec:cost}{{III}{3}{}{section.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-A}}Selection Setting}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-B}}Reference Policies: SBS and VBS}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-C}}Oracle Gap and Capture Rate}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-D}}Selection Overhead, Required Capture, and Solver-Only Capture}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-E}}Cost Regimes}{3}{}\protected@file@percent }
+\citation{efron1994}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Overhead-priced selection pipeline. One-time graph characterization is charged once and amortized over the workload; query features, feature-vector assembly, and selector inference recur on every query and are debited against the SBS--VBS oracle gap. Break-even requires the captured headroom to exceed the overhead fraction.}}{4}{}\protected@file@percent }
+\newlabel{fig:pipeline}{{1}{4}{}{figure.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Experimental Design}{4}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-A}}Graphs, Queries, and Splits}{4}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-B}}Statistical Units and Uncertainty}{4}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-C}}Solver Portfolio and $A^*$ Eligibility}{4}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-D}}Selector Features and Decision-Time Availability}{4}{}\protected@file@percent }
+\newlabel{sec:features}{{\mbox  {IV-D}}{4}{}{subsection.4.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-E}}Selector, Training, and Deployment Modes}{5}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-F}}Timing Protocol and Noise Qualification}{5}{}\protected@file@percent }
+\newlabel{sec:timing}{{\mbox  {IV-F}}{5}{}{subsection.4.6}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Experimental Configuration}}{5}{}\protected@file@percent }
+\newlabel{tab:config}{{I}{5}{}{table.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {V}Results}{5}{}\protected@file@percent }
+\newlabel{sec:results}{{V}{5}{}{section.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-A}}Fixed-Policy Baseline}{5}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-B}}Solver Complementarity}{5}{}\protected@file@percent }
+\newlabel{sec:complementarity}{{\mbox  {V-B}}{5}{}{subsection.5.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-C}}Workload Amortization and Overhead Composition}{5}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces Workload-Amortization Economics Across Query Workloads $Q$}}{6}{}\protected@file@percent }
+\newlabel{tab:workload_q}{{II}{6}{}{table.2}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {III}{\ignorespaces Library Versus Compiled Selection Economics at $Q=500$}}{6}{}\protected@file@percent }
+\newlabel{tab:economics}{{III}{6}{}{table.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-D}}Library Versus Compiled Selection Economics}{6}{}\protected@file@percent }
+\newlabel{sec:d}{{\mbox  {V-D}}{6}{}{subsection.5.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Cumulative execution cost versus workload size $Q$ (analysis-grade regime, log--log scale, aggregate over the 8 held-out test graphs). The library adaptive curve stays well above SBS at every checkpoint, while the compiled adaptive curve tracks closely above SBS.}}{6}{}\protected@file@percent }
+\newlabel{fig:cost_vs_q}{{2}{6}{}{figure.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces RequiredCapture versus workload size $Q$. A ratio above the break-even line ($1.0$) means the decision costs more than the entire oracle gap. Library inference stays overhead-bound at every checkpoint after amortization; compiled inference enters the viable zone and reaches $0.2898$ at $Q=500$.}}{6}{}\protected@file@percent }
+\newlabel{fig:req_cap}{{3}{6}{}{figure.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-E}}Selector Efficacy and Crossover Qualification}{6}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Computational economics at $Q=500$ (analysis-grade). The oracle gap ($122.5\,\mathrm  {ms}$) is the maximum saving available to any selector. Library overhead ($472.0\,\mathrm  {ms}$) exceeds it by almost fourfold; compiled overhead ($35.5\,\mathrm  {ms}$) is affordable but the selected solvers cumulatively cost $20.0\,\mathrm  {ms}$ more than the fixed policy, so the residual limit is decision quality.}}{7}{}\protected@file@percent }
+\newlabel{fig:economics}{{4}{7}{}{figure.4}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {IV}{\ignorespaces Crossover Audit and Noise Qualification Across the 40 Graph--Workload Cells}}{7}{}\protected@file@percent }
+\newlabel{tab:crossover}{{IV}{7}{}{table.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-F}}Generalization and Feature-Cost Diagnostics}{7}{}\protected@file@percent }
+\newlabel{sec:generalization}{{\mbox  {V-F}}{7}{}{subsection.5.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Per-graph runtime difference $\Delta = C_{\mathrm  {Adaptive}} - C_{\mathrm  {SBS}}$ at $Q=500$ (analysis-grade). All library differences are positive. The two compiled negatives ($-0.35\,\mathrm  {ms}$, $-1.49\,\mathrm  {ms}$) lie within the shaded band of negligible magnitude and well inside the $9.40\%$ dispersion floor of compiled execution.}}{7}{}\protected@file@percent }
+\newlabel{fig:per_graph_delta}{{5}{7}{}{figure.5}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {V}{\ignorespaces Selector Generalization and Feature-Tier Economics}}{7}{}\protected@file@percent }
+\newlabel{tab:generalization}{{V}{7}{}{table.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-G}}End-to-End Measurement and Regime Reconciliation}{7}{}\protected@file@percent }
+\newlabel{sec:regime}{{\mbox  {V-G}}{7}{}{subsection.5.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Exact classification accuracy of the selector against the majority-class policy for the held-out split and the Tier-1 LOCO and LOFO protocols. Accuracy differences are negligible at every protocol, which illustrates that classification accuracy is not the quantity that determines runtime viability.}}{8}{}\protected@file@percent }
+\newlabel{fig:accuracy}{{6}{8}{}{figure.6}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {VI}{\ignorespaces Cost-Regime Reconciliation at $Q=500$ (8 Test Graphs, 4,000 Queries)}}{8}{}\protected@file@percent }
+\newlabel{tab:regime}{{VI}{8}{}{table.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {VI}Discussion}{8}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-A}}Finding 1: Selection Overhead Is a First-Order Cost at Microsecond Solver Runtimes}{8}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-B}}Finding 2: Compilation Changes the Economic Regime of the Decision}{8}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-C}}Finding 3: After Overhead Is Controlled, the Objective Becomes the Bottleneck}{8}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-D}}Implications and Design Consequences}{8}{}\protected@file@percent }
+\bibcite{dijkstra1959}{1}
+\bibcite{bast2016}{2}
+\bibcite{nicholson1966}{3}
+\bibcite{pohl1971}{4}
+\bibcite{hart1968}{5}
+\bibcite{rice1976}{6}
+\bibcite{xu2008}{7}
+\@writefile{toc}{\contentsline {section}{\numberline {VII}Limitations and Threats to Validity}{9}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {VIII}Reproducibility}{9}{}\protected@file@percent }
+\newlabel{sec:repro}{{VIII}{9}{}{section.8}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {IX}Conclusion}{9}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{References}{9}{}\protected@file@percent }
+\bibcite{hutter2014}{8}
+\bibcite{gebser2014}{9}
+\bibcite{bischl2016}{10}
+\bibcite{kotthoff2014}{11}
+\bibcite{lindauer2015}{12}
+\bibcite{kerschke2019}{13}
+\bibcite{vanderblom2026}{14}
+\bibcite{gholami2026}{15}
+\bibcite{goldberg2005}{16}
+\bibcite{efron1994}{17}
+\gdef \@abspage@last{10}

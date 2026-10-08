@@ -1,0 +1,13 @@
+\begin{table}[htbp]
+\centering
+\caption{Table04 Feature Tier Tradeoff}
+\begin{tabular}{lrrrrrrr}
+\hline
+Tier & Features & Graph Feature Time (μs) & Query Feature Time (μs) & Selection Time (μs) & Exact Acc (%) & Near-Best Acc (%) & GapClosed \\
+\hline
+Tier 0: O(1) & 6 & 2.1 & 0.6 & 0.1 & 75.8 & 78.7 & -0.0381 \\
+Tier 0+1: O(V+E) & 21 & 630.0 & 2.1 & 0.3 & 76.1 & 79.0 & -0.2640 \\
+Tier 0+1+2: Structural & 23 & 2048.1 & 2.5 & 0.3 & 76.1 & 79.0 & -0.5265 \\
+\hline
+\end{tabular}
+\end{table}

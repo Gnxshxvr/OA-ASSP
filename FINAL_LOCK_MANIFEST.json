@@ -1,0 +1,46 @@
+{
+  "manifest": "OA-ASSP final lock manifest",
+  "generated_utc": "2026-10-03T19:50:51.620867+00:00",
+  "generator": "scripts/generate_final_lock_manifest.py",
+  "experiment_id": "stage20_corrected_20260923_092749",
+  "historical_experiment_id": "stage20_scaleup_48g_20260920_215427",
+  "superseded_experiment_id": "stage20_corrected_20260922_234910",
+  "config_hash": "91cef3a3dbfa46115869c72f596d9c2b7f266e4c711d0d89dac14ad498fbea62",
+  "historical_source_hash": "c668df6b5e2a2034892a9d6089683f2ca50a05c77fc70ed35d01e49db8252721",
+  "historical_source_hash_reproduces": false,
+  "current_lock_source_hash": "9759103dd1cb90826a9f64ad876609ba973bc862331c9f5bad0e26f4f6a5ff77",
+  "current_lock_source_hash_reproduces": true,
+  "current_source_file_count": 75,
+  "authoritative_audit": {
+    "manifest": "FINAL_CORRECTED_AUDIT/LOCK_CHECKSUMS.txt",
+    "evidence_file_count": 44,
+    "aggregate_sha256": "2b901af8e478a5cbd88bdde8167ea311642074b47f2f6fa42289d4d556e166e7",
+    "provenance_manifest": "FINAL_CORRECTED_AUDIT/SOURCE_PROVENANCE_MANIFEST.json"
+  },
+  "legacy_checksum_manifests": {
+    "checksums.txt": {
+      "hash_count": 167,
+      "status": "pre-closure snapshot; 166/167 reproduce",
+      "known_divergence": [
+        "scripts/analyze_corrected_stage20.py"
+      ],
+      "reason": "mandated reproduction-safety edit (run-scoped output + --force)"
+    },
+    "checksums_original_before.txt": {
+      "hash_count": 52,
+      "status": "immutable historical baseline; 52/52 reproduce"
+    }
+  },
+  "tests": {
+    "unique": 79,
+    "collected": 158,
+    "reexport_stubs": 15,
+    "note": "collected double-counts because tests/ holds 15 one-line re-export stubs of oa_assp/tests/"
+  },
+  "benchmark_rerun": "NO",
+  "scientific_results_changed": "NO",
+  "git_commit": "d6ce56284e840cb589c26acee9a70aa26e46acd8",
+  "git_branch": "main",
+  "git_working_tree_clean": true,
+  "git_commit_note": "commit containing the frozen state; this manifest is committed immediately after so that it can name that commit"
+}

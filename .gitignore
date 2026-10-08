@@ -1,0 +1,64 @@
+# ------------------------------------------------------------------ caches / build artifacts
+__pycache__/
+*.py[cod]
+*.pyo
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# ------------------------------------------------------------------ virtual environments
+.venv/
+venv/
+env/
+ENV/
+.python-version
+
+# ------------------------------------------------------------------ secrets / local config
+.env
+.env.*
+*.pem
+
+# ------------------------------------------------------------------ IDE / editor metadata
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.settings/
+
+# ------------------------------------------------------------------ OS metadata
+.DS_Store
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# ------------------------------------------------------------------ run-scoped audit outputs
+# Analysis/audit scripts write here by default instead of into the frozen
+# authoritative package. These are reproducible outputs, not evidence.
+audit_runs/
+
+# ------------------------------------------------------------------ temporary scratch outputs
+_tmp*
+*.orig
+*.bak
+*.tmp
+scratch/_tmp*
+
+# ------------------------------------------------------------------ NOTE: deliberately NOT ignored
+# The following are AUTHORITATIVE / frozen and MUST stay tracked:
+#   FINAL_CORRECTED_AUDIT/**   (audit package, lock manifest, provenance manifest)
+#   results/stage20_corrected_20260923_092749/**   (authoritative experiment)
+#   results/stage20_corrected_20260922_234910/**   (superseded, retained as evidence)
+#   results/stage20_scaleup_48g_20260920_215427/** (historical, immutable)
+#   results/_archive_dev/**    (non-authoritative but retained as historical evidence)
+#   configs/**, oa_assp/**, scripts/**, tests/**, *.md, requirements.txt
+
+# ------------------------------------------------------------------ agent tool metadata
+.freebuff/

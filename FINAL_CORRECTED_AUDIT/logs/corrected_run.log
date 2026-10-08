@@ -1,0 +1,211 @@
+========================================================================================
+OA-ASSP -- CORRECTED STAGE 20 EXPERIMENT
+========================================================================================
+Experiment ID     : stage20_corrected_20260923_092749
+Configuration hash: 91cef3a3dbfa46115869c72f596d9c2b7f266e4c711d0d89dac14ad498fbea62
+Source hash       : c668df6b5e2a2034892a9d6089683f2ca50a05c77fc70ed35d01e49db8252721 (72 files)
+Python            : 3.13.7
+numpy/sklearn     : 2.2.6/1.8.0
+Splits            : 32 train / 8 validation / 8 test
+
+--- [1] GRAPH CONSTRUCTION AND INSTANCE IDENTITY CHECK ---
+   PASS: 48 graphs and 24,000 query identifiers are identical to the historical run
+   PASS: E convention checked both ways (arcs in statistics, undirected in raw rows)
+
+--- [2] CORRECTED BENCHMARK EXECUTION (warmup + 5 repetitions, median) ---
+   [01/48] geometric_V40_D6_s117        V=40   E=77    d=3.850 split=train
+   [02/48] geometric_V40_D6_s118        V=40   E=76    d=3.800 split=train
+   [03/48] geometric_V40_D12_s119       V=40   E=146   d=7.300 split=train
+   [04/48] geometric_V40_D12_s120       V=40   E=148   d=7.400 split=test
+   [05/48] geometric_V80_D6_s121        V=80   E=151   d=3.775 split=train
+   [06/48] geometric_V80_D6_s122        V=80   E=152   d=3.800 split=validation
+   [07/48] geometric_V80_D12_s123       V=80   E=291   d=7.275 split=train
+   [08/48] geometric_V80_D12_s124       V=80   E=294   d=7.350 split=train
+   [09/48] geometric_V160_D6_s125       V=160  E=306   d=3.825 split=train
+   [10/48] geometric_V160_D6_s126       V=160  E=298   d=3.725 split=test
+   [11/48] geometric_V160_D12_s127      V=160  E=579   d=7.237 split=train
+   [12/48] geometric_V160_D12_s128      V=160  E=573   d=7.162 split=validation
+   [13/48] geometric_V320_D6_s129       V=320  E=592   d=3.700 split=train
+   [14/48] geometric_V320_D6_s130       V=320  E=598   d=3.737 split=validation
+   [15/48] geometric_V320_D12_s131      V=320  E=1147  d=7.169 split=train
+   [16/48] geometric_V320_D12_s132      V=320  E=1124  d=7.025 split=test
+   [17/48] random_V40_D6_s101           V=40   E=120   d=6.000 split=train
+   [18/48] random_V40_D6_s102           V=40   E=120   d=6.000 split=test
+   [19/48] random_V40_D12_s103          V=40   E=240   d=12.000 split=train
+   [20/48] random_V40_D12_s104          V=40   E=240   d=12.000 split=validation
+   [21/48] random_V80_D6_s105           V=80   E=240   d=6.000 split=train
+   [22/48] random_V80_D6_s106           V=80   E=240   d=6.000 split=train
+   [23/48] random_V80_D12_s107          V=80   E=480   d=12.000 split=train
+   [24/48] random_V80_D12_s108          V=80   E=480   d=12.000 split=test
+   [25/48] random_V160_D6_s109          V=160  E=480   d=6.000 split=train
+   [26/48] random_V160_D6_s110          V=160  E=480   d=6.000 split=validation
+   [27/48] random_V160_D12_s111         V=160  E=960   d=12.000 split=train
+   [28/48] random_V160_D12_s112         V=160  E=960   d=12.000 split=train
+   [29/48] random_V320_D6_s113          V=320  E=960   d=6.000 split=train
+   [30/48] random_V320_D6_s114          V=320  E=960   d=6.000 split=test
+   [31/48] random_V320_D12_s115         V=320  E=1920  d=12.000 split=train
+   [32/48] random_V320_D12_s116         V=320  E=1920  d=12.000 split=train
+   [33/48] scalefree_V40_D6_s133        V=40   E=114   d=5.700 split=train
+   [34/48] scalefree_V40_D6_s134        V=40   E=114   d=5.700 split=validation
+   [35/48] scalefree_V40_D12_s135       V=40   E=219   d=10.950 split=train
+   [36/48] scalefree_V40_D12_s136       V=40   E=219   d=10.950 split=train
+   [37/48] scalefree_V80_D6_s137        V=80   E=234   d=5.850 split=train
+   [38/48] scalefree_V80_D6_s138        V=80   E=234   d=5.850 split=test
+   [39/48] scalefree_V80_D12_s139       V=80   E=459   d=11.475 split=train
+   [40/48] scalefree_V80_D12_s140       V=80   E=459   d=11.475 split=validation
+   [41/48] scalefree_V160_D6_s141       V=160  E=474   d=5.925 split=train
+   [42/48] scalefree_V160_D6_s142       V=160  E=474   d=5.925 split=train
+   [43/48] scalefree_V160_D12_s143      V=160  E=939   d=11.738 split=train
+   [44/48] scalefree_V160_D12_s144      V=160  E=939   d=11.738 split=test
+   [45/48] scalefree_V320_D6_s145       V=320  E=954   d=5.963 split=train
+   [46/48] scalefree_V320_D6_s146       V=320  E=954   d=5.963 split=train
+   [47/48] scalefree_V320_D12_s147      V=320  E=1899  d=11.869 split=train
+   [48/48] scalefree_V320_D12_s148      V=320  E=1899  d=11.869 split=validation
+   Rows: 72000  queries: 24000  solver runs: 72000
+   Non-valid rows: 0   timeouts: 0
+   Wall clock: 230.8s
+
+--- [3] SBS (TRAINING-ONLY) AND VBS ---
+   SBS source: training_graphs_only (32 graphs, 16,000 instances)
+   Selected SBS policy: Always-Bidirectional-Dijkstra
+     TRAIN  Always-Dijkstra                    6703.845 ms
+     TRAIN  Always-Bidirectional-Dijkstra      3670.822 ms
+     TRAIN  Always-A*                          7334.905 ms
+   VBS wins (all rows): {'Dijkstra': 5282, 'Bidirectional Dijkstra': 17761, 'A*': 957}
+
+--- [4] FEATURE / SELECTION TIMING CALIBRATION (batched repetitions) ---
+   Tier 0: graph features  median 1.22 us/graph
+   Tier 1: graph features  median 442.95 us/graph
+   Tier 2: graph features  median 1786.80 us/graph
+   Tier 0: query features   median 1.137 us/query (batch=50, single query repeated)
+   Tier 1: query features   median 2.850 us/query (batch=50, single query repeated)
+   Tier 2: query features   median 3.000 us/query (batch=50, single query repeated)
+
+--- [5] VALIDATION-BASED SELECTOR CONFIGURATION SELECTION ---
+   Tier 0: 6 features, 24000 instances
+   Tier 1: 21 features, 24000 instances
+   Tier 2: 23 features, 24000 instances
+   Grid size: 25 configurations
+   Validation-selected configuration: {'criterion': 'gini', 'max_depth': 6, 'min_samples_leaf': 3}
+   Historical a-priori configuration: {'criterion': 'gini', 'max_depth': 4, 'min_samples_leaf': 3}
+     depth=6 leaf=3 leaves=61 valAcc=0.7173 valCost=1028.434ms obj=1165.234ms
+     depth=6 leaf=2 leaves=62 valAcc=0.7173 valCost=1028.434ms obj=1170.034ms
+     depth=5 leaf=3 leaves=32 valAcc=0.7167 valCost=1017.116ms obj=1179.116ms
+     depth=5 leaf=5 leaves=32 valAcc=0.7167 valCost=1017.116ms obj=1194.516ms
+     depth=3 leaf=2 leaves=8 valAcc=0.7155 valCost=1017.147ms obj=1220.347ms
+
+--- [6] FROZEN SELECTOR: SINGLE TEST EVALUATION ---
+   Tier 0: exact=72.78%  near-best(eps=0.05)=75.38%  single-row latency=87.9us  finite gap: 1064.536ms
+   Tier 1: exact=72.50%  near-best(eps=0.05)=75.30%  single-row latency=37.4us  finite gap: 1084.210ms
+   Tier 2: exact=73.30%  near-best(eps=0.05)=76.08%  single-row latency=64.8us  finite gap: 1059.782ms
+
+--- [7] BASELINES ---
+   Always-Dijkstra                        exact= 22.95%  near= 25.25%  solverCost= 1668.132ms
+   Always-Bidirectional-Dijkstra          exact= 72.60%  near= 75.40%  solverCost= 1064.200ms
+   Always-A*                              exact=  4.45%  near= 17.08%  solverCost= 1921.780ms
+   majority_label(Bidirectional Dijkstra) exact= 72.60%  near= 75.40%  solverCost= 1064.200ms
+
+--- [8] END-TO-END ADAPTIVE EXECUTION (test graphs) ---
+   tier 0 pass 0: completed 8 test graphs
+   tier 0 pass 1: completed 8 test graphs
+   tier 0 pass 2: completed 8 test graphs
+   tier 1 pass 0: completed 8 test graphs
+   tier 1 pass 1: completed 8 test graphs
+   tier 1 pass 2: completed 8 test graphs
+   tier 2 pass 0: completed 8 test graphs
+   tier 2 pass 1: completed 8 test graphs
+   tier 2 pass 2: completed 8 test graphs
+   Distance cross-checks (primary tier, pass 0): 4000/4000 matched
+
+   PRIMARY TIER 1 (Tier 0+1: O(V+E)) -- measured end-to-end capture analysis
+       Q       C_SBS       C_VBS    C_Adapt   overhead       gap    Capture   Required   pays
+                (ms)        (ms)       (ms)       (ms)      (ms)   frac gap   frac gap       
+       1       0.690       0.658     11.578     10.090     0.032  -341.3209   316.2989  False
+      10       9.882       9.606     32.981     18.890     0.276   -83.7212    68.4675  False
+      50      50.120      51.501    112.115     51.109    -1.381    44.8881   -37.0059  False
+     100     108.965     110.909    228.074    100.226    -1.943    61.2981   -51.5803  False
+     500     598.352     602.899   1120.322    472.040    -4.547   114.7919  -103.8111  False
+   accounting bounds at Q=500: narrow required=-101.2837  task required=-103.8111  instrumented-wall required=-119.3646  (instrumented wall clock 1191.045ms vs task cost 1120.322ms; the 70.723ms difference is instrumentation)
+   gap cross-check Q=1    benchmark-median gap=    0.012ms  paired single-shot gap=    0.032ms  relative difference=62.70%
+   gap cross-check Q=10   benchmark-median gap=    2.759ms  paired single-shot gap=    0.276ms  relative difference=899.93%
+   gap cross-check Q=50   benchmark-median gap=   13.710ms  paired single-shot gap=   -1.381ms  relative difference=1092.66%
+   gap cross-check Q=100  benchmark-median gap=   25.435ms  paired single-shot gap=   -1.943ms  relative difference=1408.99%
+   gap cross-check Q=500  benchmark-median gap=  122.523ms  paired single-shot gap=   -4.547ms  relative difference=2794.53%
+   Reconciliation at Q=500 (pass 0): end-to-end wall clock 1256.620ms vs component+overhead 1108.830ms (delta 147.791ms)
+
+--- [8c] ANALYSIS-GRADE VARIANT (measured overhead + benchmark-median solver costs) ---
+       Q       C_SBS       C_VBS   overhead       gap    Capture   Required   pays
+       1       1.362       1.350     10.090     0.012  -847.8926   847.8926  False
+      10      22.775      20.016     18.890     2.759    -7.0353     6.8473  False
+      50     108.448      94.738     51.109    13.710    -3.8487     3.7280  False
+     100     223.777     198.342    100.226    25.435    -4.1024     3.9405  False
+     500    1064.200     941.677    472.040   122.523    -4.0160     3.8527  False
+   solver-only capture achievable at Q=500: -0.1633 of the oracle gap (required to break even: narrow 3.7589 / task 3.8527 / instrumented wall 4.4299)
+   best attainable operating point: even with a perfect selector, capture would be -0.1633 vs required 3.8527 -> does NOT pay
+
+--- [8b] COMPILED-RULE INFERENCE MODE (primary tier, same pass count) ---
+   compiled pass 0: completed 8 test graphs
+   compiled pass 1: completed 8 test graphs
+   compiled pass 2: completed 8 test graphs
+   compiled inference: selection latency 0.800us/query (library: 37.45us/query), 3 passes)
+   analysis-grade Q=500: C_SBS=1064.200ms  overhead(task)=35.513ms  gap=122.523ms  RequiredCapture(narrow/task/wall)=0.2154/0.2898/0.4876  achievable_solver_capture=-0.1633  pays=False
+
+--- [9] FEATURE-TIER COMPARISON (identical hyperparameters) ---
+   Tier 0 analysis-grade Q=500: overhead(task)= 346.529ms gap=122.523ms required=  2.8283 achievable=-0.0027 | compiled required= 0.1144
+   Tier 0: feats= 6 acc=72.78% gfeat=    1.22us qfeat= 1.137us sel(lib)=  87.9us sel(compiled)= 0.80us Capture_e2e= 84.8098 Req_e2e=-75.9334 pays=False
+   Tier 1 analysis-grade Q=500: overhead(task)= 472.040ms gap=122.523ms required=  3.8527 achievable=-0.1633 | compiled required= 0.3552
+   Tier 1: feats=21 acc=72.50% gfeat=  442.95us qfeat= 2.850us sel(lib)=  37.4us sel(compiled)= 0.80us Capture_e2e=130.3454 Req_e2e=-119.3646 pays=False
+   Tier 2 analysis-grade Q=500: overhead(task)= 557.833ms gap=122.523ms required=  4.5529 achievable= 0.0361 | compiled required= 0.4178
+   Tier 2: feats=23 acc=73.30% gfeat= 1786.80us qfeat= 3.000us sel(lib)=  64.8us sel(compiled)= 1.35us Capture_e2e=140.6029 Req_e2e=-126.3063 pays=False
+
+--- [10] SELECTOR GENERALIZATION ---
+   tier 0 standard_held_out    folds=  1  median exact= 72.78%  majority= 72.60%  median lift= +0.18pp  median solver-capture= -0.0027
+   tier 0 leave_one_cell_out   folds= 24  median exact= 79.10%  majority= 77.95%  median lift= +0.00pp  median solver-capture=  0.0000
+   tier 0 leave_one_family_out folds=  3  median exact= 83.76%  majority= 83.45%  median lift= +0.06pp  median solver-capture=  0.0011
+   tier 1 standard_held_out    folds=  1  median exact= 72.50%  majority= 72.60%  median lift= -0.10pp  median solver-capture= -0.1633
+   tier 1 leave_one_cell_out   folds= 24  median exact= 80.80%  majority= 77.95%  median lift= +0.00pp  median solver-capture=  0.0000
+   tier 1 leave_one_family_out folds=  3  median exact= 79.09%  majority= 83.45%  median lift= +0.00pp  median solver-capture= -0.1386
+
+--- [11] GRAPH-LEVEL BOOTSTRAP (paired, test graphs only) ---
+   adaptive_minus_sbs     point=  0.59269  95% CI [  0.46210,   0.71864]
+   adaptive_ratio_sbs     point=  1.99054  95% CI [  1.68647,   2.68548]
+   gap_closed             point=      nan  95% CI [ 20.27930, 333.25870]
+   capture_rate           point=      nan  95% CI [-333.25870, -20.27930]
+   required_capture       point=      nan  95% CI [ 19.45080, 295.65752]
+
+--- [11b] MEASUREMENT REPRODUCIBILITY (adaptive workload repeated per pass) ---
+   tier 0 Q=1    C_adaptive across passes: min=2.916 median=3.358 max=3.816 ms | Adaptive-SBS: min=+2.134 median=+2.695 max=+2.703 ms (sign stable: True)
+   tier 0 Q=10   C_adaptive across passes: min=23.819 median=25.669 max=28.689 ms | Adaptive-SBS: min=+13.270 median=+13.317 max=+15.964 ms (sign stable: True)
+   tier 0 Q=500  C_adaptive across passes: min=1017.575 median=1075.147 max=1146.472 ms | Adaptive-SBS: min=+480.930 median=+491.828 max=+560.257 ms (sign stable: True)
+   tier 1 Q=1    C_adaptive across passes: min=11.709 median=12.460 max=12.553 ms | Adaptive-SBS: min=+11.004 median=+11.742 max=+11.775 ms (sign stable: True)
+   tier 1 Q=10   C_adaptive across passes: min=35.360 median=38.217 max=39.306 ms | Adaptive-SBS: min=+22.998 median=+25.504 max=+28.537 ms (sign stable: True)
+   tier 1 Q=500  C_adaptive across passes: min=1256.620 median=1439.095 max=1491.527 ms | Adaptive-SBS: min=+592.527 median=+792.058 max=+826.127 ms (sign stable: True)
+   tier 2 Q=1    C_adaptive across passes: min=15.178 median=20.818 max=22.685 ms | Adaptive-SBS: min=+13.776 median=+19.200 max=+21.250 ms (sign stable: True)
+   tier 2 Q=10   C_adaptive across passes: min=32.557 median=46.154 max=53.819 ms | Adaptive-SBS: min=+14.906 median=+30.015 max=+36.581 ms (sign stable: True)
+   tier 2 Q=500  C_adaptive across passes: min=1485.213 median=1554.579 max=1555.554 ms | Adaptive-SBS: min=+817.611 median=+883.603 max=+884.549 ms (sign stable: True)
+
+--- [12] FIGURES ---
+   results\stage20_corrected_20260923_092749\figures\fig_c1_cost_vs_Q.png
+   results\stage20_corrected_20260923_092749\figures\fig_c1_cost_vs_Q.pdf
+   results\stage20_corrected_20260923_092749\figures\fig_c2_capture_vs_required.png
+   results\stage20_corrected_20260923_092749\figures\fig_c2_capture_vs_required.pdf
+   results\stage20_corrected_20260923_092749\figures\fig_c3_overhead_decomposition.png
+   results\stage20_corrected_20260923_092749\figures\fig_c3_overhead_decomposition.pdf
+   results\stage20_corrected_20260923_092749\figures\fig_c4_tier_economics.png
+   results\stage20_corrected_20260923_092749\figures\fig_c4_tier_economics.pdf
+   results\stage20_corrected_20260923_092749\figures\fig_c5_selector_vs_majority.png
+   results\stage20_corrected_20260923_092749\figures\fig_c5_selector_vs_majority.pdf
+   results\stage20_corrected_20260923_092749\figures\fig_c6_per_graph_delta.png
+   results\stage20_corrected_20260923_092749\figures\fig_c6_per_graph_delta.pdf
+   results\stage20_corrected_20260923_092749\figures\fig_c7_selector_tuning.png
+   results\stage20_corrected_20260923_092749\figures\fig_c7_selector_tuning.pdf
+   results\stage20_corrected_20260923_092749\figures\fig_c8_reconciliation.png
+   results\stage20_corrected_20260923_092749\figures\fig_c8_reconciliation.pdf
+   results\stage20_corrected_20260923_092749\figures\fig_c9_analysis_grade.png
+   results\stage20_corrected_20260923_092749\figures\fig_c9_analysis_grade.pdf
+
+========================================================================================
+CORRECTED STAGE 20 COMPLETE in 303.4s (5.06 min)
+EXPERIMENT ID : stage20_corrected_20260923_092749
+MANIFEST      : results\stage20_corrected_20260923_092749\processed\stage20_corrected_20260923_092749_manifest.json
+========================================================================================

@@ -1,0 +1,47 @@
+{
+  "Q1_adaptive_beats_sbs_anywhere": {
+    "answer": "No.",
+    "evidence": "Primary configuration: 0 of 40 graph x Q cells have adaptive below SBS; the smallest loss is +0.378 ms (single graph, Q=500). With compiled-rule inference (a deployment variant, not the primary configuration) 4 of 40 cells are nominally below SBS, by at most 2.419 ms = 0.23% of the Q=500 SBS cost, i.e. far inside the 9% pass-to-pass dispersion of the same quantity; these are not reported as a crossover."
+  },
+  "Q2_why_not": {
+    "answer": "Two independent reasons, quantified separately.",
+    "solver_side": "The selector's expected solver cost equals the SBS policy's: solver-only capture = -0.1633 of the oracle gap at Q=500 (chosen-solver total 1084.210 ms vs SBS 1064.200 ms).",
+    "overhead_side": "Required capture at Q=500 is 3.853 of the oracle gap with library per-query inference and 0.290 with compiled rules; the oracle gap is only 11.51% of the SBS cost."
+  },
+  "Q3_vbs_headroom": {
+    "answer": "Small but real.",
+    "evidence": "Oracle gap over 8 test graphs and 4,000 queries at Q=500: 122.523 ms = 11.51% of the SBS policy cost. VBS wins overall: Bidirectional Dijkstra takes most instances."
+  },
+  "Q4_capture": {
+    "answer": "No.",
+    "evidence": "CaptureRate at Q=500 = -4.0160; required = 3.8527. Solver-only (overhead-free) capture = -0.1633."
+  },
+  "Q5_capture_vs_Q": {
+    "answer": "Capture is roughly Q-independent and never positive at aggregate level.",
+    "evidence": "Q=1:-847.893 Q=10:-7.035 Q=50:-3.849 Q=100:-4.102 Q=500:-4.016"
+  },
+  "Q6_required_capture_vs_Q": {
+    "answer": "Required capture falls with Q because the graph-level feature cost is paid once and the per-query costs are roughly constant while the cumulative oracle gap grows.",
+    "evidence": "Q=1:847.893 Q=10:6.847 Q=50:3.728 Q=100:3.940 Q=500:3.853"
+  },
+  "Q7_tier_expansion": {
+    "answer": "No. Richer features cost more than they return.",
+    "evidence": "Analysis-grade required capture at Q=500: tier 0 = 2.828 (library) / 0.114 (compiled); exact accuracy is statistically indistinguishable across tiers."
+  },
+  "Q8_generalizes_to_unseen_configurations": {
+    "answer": "No.",
+    "evidence": "Primary tier 1: leave-one-cell-out median exact accuracy 80.80% vs majority 77.95% (median lift +0.00pp over 24 folds); the tree predicts a constant solver in 9 of those folds."
+  },
+  "Q9_generalizes_across_families": {
+    "answer": "No.",
+    "evidence": "Primary tier 1: leave-one-family-out median exact accuracy 79.09% vs majority 83.45% (median lift +0.00pp over 3 folds); the tree predicts a constant solver in 1 of those folds."
+  },
+  "Q1b_compiled_variant_nominal_wins": {
+    "answer": "Nominally, with compiled-rule inference, a small number of graph x Q cells sit a fraction of a percent below SBS; the margin is one to two orders of magnitude smaller than the pass-to-pass dispersion of the same quantity, so it is not a reproducible crossover.",
+    "evidence": "4 of 40 cells below SBS, largest -2.419 ms; pass-to-pass dispersion of the same aggregate wall clock 9.4%."
+  },
+  "Q10_bottleneck": {
+    "answer": "Selector efficacy is the binding constraint whenever inference is cheap (compiled rules); per-query selection overhead is the binding constraint when inference goes through a general-purpose model library. Solver diversity is not the constraint.",
+    "evidence": "compiled: required 0.290 < 1.0, so even a perfect selector would pay, but achievable capture is -0.1633. library: required 3.853 > 1.0, so no selector could pay."
+  }
+}

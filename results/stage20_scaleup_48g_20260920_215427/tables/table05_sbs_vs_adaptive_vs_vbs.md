@@ -1,0 +1,7 @@
+# Table05 Sbs Vs Adaptive Vs Vbs
+
+| Policy | Type | Total Solver Cost (ms) | Total Overhead (ms) | Total Workload Cost (ms) |
+| --- | --- | --- | --- | --- |
+| SBS | Fixed Policy | 564.114 | 0.000 | 564.114 |
+| OA-ASSP | Adaptive Policy | 563.213 | 14.285 | 577.498 |
+| VBS | Offline Oracle | 513.424 | 0.000 | 513.424 |

@@ -1,0 +1,77 @@
+{
+  "project_name": "OA-ASSP",
+  "project_full_name": "Overhead-Aware Adaptive Algorithm Selection for Exact Shortest Paths",
+  "manuscript_title": "When Is Algorithm Selection Worth the Cost? An Overhead-Aware Study of Exact Shortest-Path Computation",
+  "authors": [
+    {
+      "name": "Ganeshvar K S",
+      "affiliation": "School of Computer Science, Vellore Institute of Technology, Chennai, India"
+    },
+    {
+      "name": "Sai Siddaarth",
+      "affiliation": "School of Computer Science, Vellore Institute of Technology, Chennai, India"
+    },
+    {
+      "name": "Uma Maheshwari",
+      "affiliation": "School of Computer Science, Vellore Institute of Technology, Chennai, India"
+    }
+  ],
+  "package_version": "1.0.0",
+  "package_date_utc": "2026-10-04T12:00:00+00:00",
+  "audit_closure_date_utc": "2026-10-07T19:30:00+00:00",
+  "authoritative_experiment_id": "stage20_corrected_20260923_092749",
+  "historical_experiment_id": "stage20_scaleup_48g_20260920_215427",
+  "superseded_experiment_id": "stage20_corrected_20260922_234910",
+  "config_hash": "91cef3a3dbfa46115869c72f596d9c2b7f266e4c711d0d89dac14ad498fbea62",
+  "current_lock_source_hash": "9759103dd1cb90826a9f64ad876609ba973bc862331c9f5bad0e26f4f6a5ff77",
+  "historical_source_hash": "c668df6b5e2a2034892a9d6089683f2ca50a05c77fc70ed35d01e49db8252721",
+  "audit_evidence_file_count": 44,
+  "audit_aggregate_sha256": "2b901af8e478a5cbd88bdde8167ea311642074b47f2f6fa42289d4d556e166e7",
+  "frozen_git_commit": "d6ce56284e840cb589c26acee9a70aa26e46acd8",
+  "head_git_commit": "7ebf2b2d66952201bcb7044dd724809cfd004e55",
+  "final_manuscript_tex": "manuscript/OA-ASSP_Final_Manuscript.tex",
+  "final_manuscript_pdf": "manuscript/OA-ASSP_Final_Manuscript.pdf",
+  "canonical_manuscript_tex": "paper/main.tex",
+  "canonical_manuscript_pdf": "paper/main.pdf",
+  "reproduction_instructions": "reproducibility/REPRODUCTION.md",
+  "results_map": "reproducibility/RESULTS_MAP.md",
+  "manuscript_evidence_map": "reproducibility/MANUSCRIPT_EVIDENCE_MAP.md",
+  "file_inventory": "reproducibility/FINAL_FILE_INVENTORY.md",
+  "release_checksums": "reproducibility/FINAL_RELEASE_SHA256SUMS.txt",
+  "closure_audit_report": "reproducibility/FINAL_CLOSURE_REPORT.md",
+  "test_suite": {
+    "framework": "pytest",
+    "unique_tests": 79,
+    "collected_tests": 158,
+    "passing_tests": 158,
+    "failing_tests": 0
+  },
+  "headline_scientific_values": {
+    "Q": 500,
+    "SBS_ms": 1064.200,
+    "VBS_ms": 941.677,
+    "OracleGap_ms": 122.523,
+    "library": {
+      "Adaptive_ms": 1556.250,
+      "SelectionOverhead_ms": 472.040,
+      "RequiredCapture": 3.8527,
+      "CaptureRate": -4.0160,
+      "dispersion_pct": 16.32
+    },
+    "compiled": {
+      "Adaptive_ms": 1119.723,
+      "SelectionOverhead_ms": 35.513,
+      "RequiredCapture": 0.2898,
+      "CaptureRate": -0.4532,
+      "dispersion_pct": 9.40
+    },
+    "solver_only_capture": -0.1633,
+    "solver_only_capture_95ci": [-0.4735, 0.0856],
+    "end_to_end_measured_ms": 1191.045,
+    "genuine_crossovers": "0/40",
+    "nominal_crossovers_compiled_primary": "3/40",
+    "nominal_crossovers_compiled_conservative": "4/40",
+    "max_conservative_nominal_advantage_ms": -2.419,
+    "max_conservative_nominal_advantage_pct_sbs": 0.227
+  }
+}

@@ -1,0 +1,141 @@
+================================================================================================
+OA-ASSP -- CORRECTED STAGE 20 POST-HOC ANALYSIS
+================================================================================================
+Experiment      : stage20_corrected_20260923_092749
+Config hash     : 91cef3a3dbfa46115869c72f596d9c2b7f266e4c711d0d89dac14ad498fbea62
+Source hash     : c668df6b5e2a2034892a9d6089683f2ca50a05c77fc70ed35d01e49db8252721
+
+A. PRIMARY (analysis-grade) cumulative costs in seconds
+               Q     total_SBS     total_VBS total_selected_solver total_Adaptive_task SelectionOverhead_task     OracleGap CaptureRate_task RequiredCapture_task SolverOnlyCapture
+          1.0000        0.0014        0.0014        0.0014        0.0115        0.0101        0.0000     -847.8926      847.8926        0.0000
+         10.0000        0.0228        0.0200        0.0233        0.0422        0.0189        0.0028       -7.0353        6.8473       -0.1880
+         50.0000        0.1084        0.0947        0.1101        0.1612        0.0511        0.0137       -3.8487        3.7280       -0.1207
+        100.0000        0.2238        0.1983        0.2279        0.3281        0.1002        0.0254       -4.1024        3.9405       -0.1619
+        500.0000        1.0642        0.9417        1.0842        1.5562        0.4720        0.1225       -4.0160        3.8527       -0.1633
+
+B. COMPILED-RULE INFERENCE (analysis-grade), primary tier
+               Q     total_SBS total_Adaptive_task SelectionOverhead_task     OracleGap CaptureRate_task RequiredCapture_task SolverOnlyCapture
+          1.0000        0.0014        0.0100        0.0087        0.0000     -729.9007      729.9007        0.0000
+         10.0000        0.0228        0.0325        0.0092        0.0028       -3.5297        3.3417       -0.1880
+         50.0000        0.1084        0.1214        0.0113        0.0137       -0.9466        0.8259       -0.1207
+        100.0000        0.2238        0.2418        0.0140        0.0254       -0.7104        0.5485       -0.1619
+        500.0000        1.0642        1.1197        0.0355        0.1225       -0.4532        0.2898       -0.1633
+
+C. Fully single-shot measured variant (noise-dominated oracle gap)
+               Q total_Adaptive_e2e SelectionOverhead_e2e     OracleGap CaptureRate_e2e RequiredCapture_e2e
+          1.0000        0.0117        0.0102        0.0000     -345.7550      320.7329
+         10.0000        0.0344        0.0203        0.0003      -88.8480       73.5943
+         50.0000        0.1192        0.0582       -0.0014       50.0089      -42.1267
+        100.0000        0.2422        0.1144       -0.0019       68.5775      -58.8597
+        500.0000        1.1910        0.5428       -0.0045      130.3454     -119.3646
+
+D. Feature tiers (identical hyperparameters)
+            tier feature_count exact_accuracy analysis_grade_overhead_Q500_ms analysis_grade_required_capture_Q500 compiled_analysis_grade_required_capture_Q500 analysis_grade_solver_capture_Q500
+          0.0000        6.0000        0.7278      346.5286        2.8283        0.1144       -0.0027
+          1.0000       21.0000        0.7250      472.0397        3.8527        0.3552       -0.1633
+          2.0000       23.0000        0.7330      557.8330        4.5529        0.4178        0.0361
+
+E. CROSSOVER SEARCH (analysis-grade, per graph x Q)
+   cells examined            : 40
+   cells where adaptive wins : 0
+   best (least negative-loss) cell: +0.378 ms
+
+F. GENERALIZATION (folds, identical hyperparameters)
+   tier 0 standard_held_out    folds=  1  exact= 72.78%  majority= 72.60%  lift= +0.18pp  solver-capture=-0.0027  constant-prediction folds=0/1
+   tier 1 standard_held_out    folds=  1  exact= 72.50%  majority= 72.60%  lift= -0.10pp  solver-capture=-0.1633  constant-prediction folds=0/1
+   tier 0 leave_one_cell_out   folds= 24  exact= 79.10%  majority= 77.95%  lift= +0.00pp  solver-capture=+0.0000  constant-prediction folds=15/24
+   tier 1 leave_one_cell_out   folds= 24  exact= 80.80%  majority= 77.95%  lift= +0.00pp  solver-capture=+0.0000  constant-prediction folds=9/24
+   tier 0 leave_one_family_out folds=  3  exact= 83.76%  majority= 83.45%  lift= +0.06pp  solver-capture=+0.0011  constant-prediction folds=1/3
+   tier 1 leave_one_family_out folds=  3  exact= 79.09%  majority= 83.45%  lift= +0.00pp  solver-capture=-0.1386  constant-prediction folds=1/3
+
+G. TEST-SET BASELINES (benchmark medians, all 4,000 test queries)
+   Always-Dijkstra                          exact= 22.95%  near= 25.25%  solverCost= 1668.132 ms
+   Always-Bidirectional-Dijkstra            exact= 72.60%  near= 75.40%  solverCost= 1064.200 ms
+   Always-A*                                exact=  4.45%  near= 17.08%  solverCost= 1921.780 ms
+   majority_label(Bidirectional Dijkstra)   exact= 72.60%  near= 75.40%  solverCost= 1064.200 ms
+
+H. VALIDATION-SELECTED SELECTOR CONFIGURATION
+   criterion=gini max_depth=6 min_samples_leaf=3 leaves=61 valExact=71.73% valObjective=1165.234ms
+
+I. ORACLE-GAP NOISE BOUND (benchmark medians vs paired single-shot)
+   Q=   1  benchmark gap=    0.012 ms  paired gap=    0.032 ms  relative difference=    62.7%
+   Q=  10  benchmark gap=    2.759 ms  paired gap=    0.276 ms  relative difference=   899.9%
+   Q=  50  benchmark gap=   13.710 ms  paired gap=   -1.381 ms  relative difference=  1092.7%
+   Q= 100  benchmark gap=   25.435 ms  paired gap=   -1.943 ms  relative difference=  1409.0%
+   Q= 500  benchmark gap=  122.523 ms  paired gap=   -4.547 ms  relative difference=  2794.5%
+   -> the single-shot paired gap disagrees with the repeated-median gap by up to 2795%; it is noise-dominated and is therefore not used as the primary gap
+
+J. PAIRED GRAPH-LEVEL BOOTSTRAP (analysis-grade, primary tier, Q=500)
+   adaptive_minus_sbs_seconds       point=    0.492050  95% CI [    0.382819,     0.615039]
+   adaptive_ratio_sbs               point=    1.462366  95% CI [    1.324214,     1.734215]
+   capture_rate_task                point=   -4.015981  95% CI [  -11.927801,    -2.484533]
+   required_capture_task            point=    3.852665  95% CI [    2.287699,    12.003440]
+   solver_only_capture              point=   -0.163316  95% CI [   -0.473486,     0.085643]
+   oracle_gap_seconds               point=    0.122523  95% CI [    0.035961,     0.239078]
+
+K. MEASUREMENT REPRODUCIBILITY (adaptive workload repeated per pass)
+   tier 0 Q=   1  C_adaptive min/median/max =     2.916/    3.358/    3.816 ms  adaptive-sbs median=   +2.695 ms  sign stable=True
+   tier 0 Q=  10  C_adaptive min/median/max =    23.819/   25.669/   28.689 ms  adaptive-sbs median=  +13.317 ms  sign stable=True
+   tier 0 Q= 500  C_adaptive min/median/max =  1017.575/ 1075.147/ 1146.472 ms  adaptive-sbs median= +491.828 ms  sign stable=True
+   tier 1 Q=   1  C_adaptive min/median/max =    11.709/   12.460/   12.553 ms  adaptive-sbs median=  +11.742 ms  sign stable=True
+   tier 1 Q=  10  C_adaptive min/median/max =    35.360/   38.217/   39.306 ms  adaptive-sbs median=  +25.504 ms  sign stable=True
+   tier 1 Q= 500  C_adaptive min/median/max =  1256.620/ 1439.095/ 1491.527 ms  adaptive-sbs median= +792.058 ms  sign stable=True
+   tier 2 Q=   1  C_adaptive min/median/max =    15.178/   20.818/   22.685 ms  adaptive-sbs median=  +19.200 ms  sign stable=True
+   tier 2 Q=  10  C_adaptive min/median/max =    32.557/   46.154/   53.819 ms  adaptive-sbs median=  +30.015 ms  sign stable=True
+   tier 2 Q= 500  C_adaptive min/median/max =  1485.213/ 1554.579/ 1555.554 ms  adaptive-sbs median= +883.603 ms  sign stable=True
+
+F2. COMPILED-RULE VARIANT: nominal wins vs pass dispersion
+   nominal cells below SBS : 4 of 40
+   largest nominal gain    : -2.419 ms
+   pass-to-pass dispersion : 9.4% of the same aggregate wall clock over 3 passes
+
+L. FINAL SCIENTIFIC QUESTIONS
+   Q1_adaptive_beats_sbs_anywhere
+      answer  : No.
+      evidence: Primary configuration: 0 of 40 graph x Q cells have adaptive below SBS; the smallest loss is +0.378 ms (single graph, Q=500). With compiled-rule inference (a deployment variant, not the primary configuration) 4 of 40 cells are nominally below SBS, by at most 2.419 ms = 0.23% of the Q=500 SBS cost, i.e. far inside the 9% pass-to-pass dispersion of the same quantity; these are not reported as a crossover.
+   Q2_why_not
+      answer  : Two independent reasons, quantified separately.
+      evidence: 
+      solver_side: The selector's expected solver cost equals the SBS policy's: solver-only capture = -0.1633 of the oracle gap at Q=500 (chosen-solver total 1084.210 ms vs SBS 1064.200 ms).
+      overhead_side: Required capture at Q=500 is 3.853 of the oracle gap with library per-query inference and 0.290 with compiled rules; the oracle gap is only 11.51% of the SBS cost.
+   Q3_vbs_headroom
+      answer  : Small but real.
+      evidence: Oracle gap over 8 test graphs and 4,000 queries at Q=500: 122.523 ms = 11.51% of the SBS policy cost. VBS wins overall: Bidirectional Dijkstra takes most instances.
+   Q4_capture
+      answer  : No.
+      evidence: CaptureRate at Q=500 = -4.0160; required = 3.8527. Solver-only (overhead-free) capture = -0.1633.
+   Q5_capture_vs_Q
+      answer  : Capture is roughly Q-independent and never positive at aggregate level.
+      evidence: Q=1:-847.893 Q=10:-7.035 Q=50:-3.849 Q=100:-4.102 Q=500:-4.016
+   Q6_required_capture_vs_Q
+      answer  : Required capture falls with Q because the graph-level feature cost is paid once and the per-query costs are roughly constant while the cumulative oracle gap grows.
+      evidence: Q=1:847.893 Q=10:6.847 Q=50:3.728 Q=100:3.940 Q=500:3.853
+   Q7_tier_expansion
+      answer  : No. Richer features cost more than they return.
+      evidence: Analysis-grade required capture at Q=500: tier 0 = 2.828 (library) / 0.114 (compiled); exact accuracy is statistically indistinguishable across tiers.
+   Q8_generalizes_to_unseen_configurations
+      answer  : No.
+      evidence: Primary tier 1: leave-one-cell-out median exact accuracy 80.80% vs majority 77.95% (median lift +0.00pp over 24 folds); the tree predicts a constant solver in 9 of those folds.
+   Q9_generalizes_across_families
+      answer  : No.
+      evidence: Primary tier 1: leave-one-family-out median exact accuracy 79.09% vs majority 83.45% (median lift +0.00pp over 3 folds); the tree predicts a constant solver in 1 of those folds.
+   Q1b_compiled_variant_nominal_wins
+      answer  : Nominally, with compiled-rule inference, a small number of graph x Q cells sit a fraction of a percent below SBS; the margin is one to two orders of magnitude smaller than the pass-to-pass dispersion of the same quantity, so it is not a reproducible crossover.
+      evidence: 4 of 40 cells below SBS, largest -2.419 ms; pass-to-pass dispersion of the same aggregate wall clock 9.4%.
+   Q10_bottleneck
+      answer  : Selector efficacy is the binding constraint whenever inference is cheap (compiled rules); per-query selection overhead is the binding constraint when inference goes through a general-purpose model library. Solver diversity is not the constraint.
+      evidence: compiled: required 0.290 < 1.0, so even a perfect selector would pay, but achievable capture is -0.1633. library: required 3.853 > 1.0, so no selector could pay.
+
+M. ORIGINAL STAGE 20 vs CORRECTED STAGE 20 (per-graph sums over the 8 test graphs)
+   original crossover cells (all 48 graphs x 5 Q): 1
+      scalefree_V80_D6_s138 Q=500 delta=-0.0371 ms
+   corrected crossover cells                    : 0
+
+Wrote:
+   FINAL_CORRECTED_AUDIT/corrected_results_manifest.json
+   FINAL_CORRECTED_AUDIT/corrected_config.yaml
+   FINAL_CORRECTED_AUDIT/original_vs_corrected.csv
+   FINAL_CORRECTED_AUDIT/corrected_questions.json
+   FINAL_CORRECTED_AUDIT/bootstrap_analysis_grade.csv
+   FINAL_CORRECTED_AUDIT/checksums.txt
+   FINAL_CORRECTED_AUDIT/figures/ (18 files)

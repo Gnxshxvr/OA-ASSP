@@ -1,0 +1,5 @@
+name,policy,num_queries,exact_accuracy,near_best_accuracy,total_selected_solver_runtime,train_label_counts
+Always-Dijkstra,Always-Dijkstra,4000,0.2295,0.2525,1.6681323004886508,
+Always-Bidirectional-Dijkstra,Always-Bidirectional-Dijkstra,4000,0.726,0.754,1.0642001990927383,
+Always-A*,Always-A*,4000,0.0445,0.17075,1.9217799018369988,
+majority_label(Bidirectional Dijkstra),Bidirectional Dijkstra,4000,0.726,0.754,1.0642001990927383,"{""Dijkstra"": 3393, ""Bidirectional Dijkstra"": 11998, ""A*"": 609}"

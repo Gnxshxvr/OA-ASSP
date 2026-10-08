@@ -1,0 +1,15 @@
+# OA-ASSP dependency set.
+#
+# NOTE (corrected): the historical file omitted scikit-learn even though
+# oa_assp/selector/decision_tree.py imports DecisionTreeClassifier from it, and it did
+# not pin any version. Every dependency that participates in the results is now listed
+# and pinned to the version used by the corrected experiment. The corrected manifest
+# records the resolved versions of these packages at run time.
+
+numpy==2.2.6
+scipy==1.16.2
+scikit-learn==1.8.0
+matplotlib==3.10.6
+PyYAML==6.0.2
+pytest==9.1.1
+pandas==2.3.3

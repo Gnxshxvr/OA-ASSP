@@ -1,0 +1,59 @@
+experiment_id: scaleup_48g_58590b0bb554
+configuration_hash: 58590b0bb55428b3674107b937c2e261406bfe3d84f34c3f5bfd7b63c20596ec
+seeds:
+  master_seed: 42
+  base_seed: 100
+  query_seed_policy: graph_seed + 2000
+  selector_seed: 42
+  bootstrap_seed: 4001
+graphs:
+  families:
+  - random
+  - geometric
+  - scale_free
+  sizes:
+  - 40
+  - 80
+  - 160
+  - 320
+  degrees:
+  - 6.0
+  - 12.0
+  seeds_per_cfg: 2
+  total_count: 48
+  train_count: 32
+  val_count: 8
+  test_count: 8
+queries:
+  count_per_graph: 500
+  q_checkpoints:
+  - 1
+  - 10
+  - 50
+  - 100
+  - 500
+solvers:
+  algorithms:
+  - Dijkstra
+  - Bidirectional Dijkstra
+  - A*
+  timing:
+    warmup_runs: 1
+    repetitions: 3
+    timeout_seconds: 30.0
+features:
+  tiers:
+  - Tier 0
+  - Tier 0+1
+  - Tier 0+1+2
+selector:
+  model: DecisionTreeClassifier
+  hyperparameters:
+    max_depth: 4
+    min_samples_leaf: 3
+    random_state: 42
+    criterion: gini
+    epsilon: 0.05
+bootstrap:
+  samples: 1000
+  confidence_level: 0.95

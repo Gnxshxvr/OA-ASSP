@@ -1,0 +1,6 @@
+metric,point_estimate,ci_lower,ci_upper,confidence_level,std_error,num_replicates,num_graphs,graph_sampling,caveat
+adaptive_minus_sbs,0.3114994064089843,0.27698039837415594,0.3574145597682049,0.95,0.021085276136338878,1000,8,paired_graph_level,"8 purposively designed test graphs; intervals bound this sample, not a population"
+adaptive_ratio_sbs,1.7412427431381843,1.565981804586506,2.1661265251524955,0.95,0.1542642553867508,1000,8,paired_graph_level,"8 purposively designed test graphs; intervals bound this sample, not a population"
+gap_closed,133.82278697746256,16.459685970258022,862.7526417159803,0.95,738.5326713641894,626,8,paired_graph_level,"8 purposively designed test graphs; intervals bound this sample, not a population"
+capture_rate,-133.82278697746256,-862.7526417159797,-16.459685970258022,0.95,738.5326713641894,626,8,paired_graph_level,"8 purposively designed test graphs; intervals bound this sample, not a population"
+required_capture,121.66246079761696,15.086688312168349,782.714617589126,0.95,680.2622994299916,626,8,paired_graph_level,"8 purposively designed test graphs; intervals bound this sample, not a population"

@@ -1,0 +1,88 @@
+# OA-ASSP corrected experiment configuration.
+#
+# This file describes EVERY parameter that affects the results, including the ones the
+# historical configuration hash silently omitted (weight multiplier, weight noise,
+# random weight range, geometric mechanism, directedness, timing repetitions, the
+# micro-timing protocol and the bootstrap seed).
+#
+# Graph instances, query workloads, seeds and splits are identical to the historical
+# Stage 20 experiment: the split manifest is loaded from the frozen CSV produced for
+# that experiment. Only the measurement protocol and the selector/decision procedures
+# differ. See README_CORRECTED.md.
+
+experiment_family: corrected_stage20
+
+graphs:
+  manifest_file: configs/graph_split_manifest_48g.csv
+  families: [random, geometric, scale_free]
+  sizes: [40, 80, 160, 320]
+  degrees: [6.0, 12.0]
+  seeds_per_cfg: 2
+  total_count: 48
+  train_count: 32
+  val_count: 8
+  test_count: 8
+  directed: false
+  generation:
+    geometric_mechanism: knn
+    geometric_weight_c: 1.25
+    geometric_weight_eps: 0.1
+    random_weight_min: 1.0
+    random_weight_max: 100.0
+
+seeds:
+  master_seed: 42
+  base_seed: 100
+  query_seed_policy: graph_seed + 2000
+  selector_seed: 42
+  bootstrap_seed: 4001
+
+queries:
+  count_per_graph: 500
+  q_checkpoints: [1, 10, 50, 100, 500]
+
+solvers:
+  algorithms: [Dijkstra, Bidirectional Dijkstra, A*]
+  timing:
+    warmup_runs: 1
+    repetitions: 5
+    timeout_seconds: 30.0
+    enforce_timeout: false
+
+features:
+  tiers: [0, 1, 2]
+  micro_timing:
+    graph_feature_repetitions: 20
+    graph_feature_warmup: 2
+    query_feature_repetitions: 20
+    query_feature_warmup: 2
+    query_feature_batch: 50
+    query_feature_sample_per_graph: 50
+    selection_latency_repetitions: 20
+    selection_latency_warmup: 2
+
+selector:
+  model: DecisionTreeClassifier
+  hyperparameter_selection: validation
+  grid:
+    criterion: [gini]
+    max_depth: [2, 3, 4, 5, 6]
+    min_samples_leaf: [1, 2, 3, 5, 10]
+  frozen_reference:
+    criterion: gini
+    max_depth: 4
+    min_samples_leaf: 3
+  random_state: 42
+  epsilon: 0.05
+
+adaptive:
+  passes: 3
+  verify_distances_on_first_pass: true
+
+bootstrap:
+  samples: 1000
+  confidence_level: 0.95
+
+generalization:
+  protocols: [standard_held_out, leave_one_cell_out, leave_one_family_out]
+  tiers: [0, 1]

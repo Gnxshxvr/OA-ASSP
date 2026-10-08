@@ -1,0 +1,7 @@
+# Table02 Algorithm Runtime
+
+| Algorithm | Median Runtime (ms) | Mean Runtime (ms) | Min Runtime (ms) | Max Runtime (ms) | Std Dev (ms) |
+| --- | --- | --- | --- | --- | --- |
+| Dijkstra | 0.147 | 0.278 | 0.003 | 4.480 | 0.344 |
+| Bidirectional Dijkstra | 0.088 | 0.144 | 0.003 | 2.053 | 0.163 |
+| A* | 0.170 | 0.310 | 0.003 | 6.250 | 0.373 |

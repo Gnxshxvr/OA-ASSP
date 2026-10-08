@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this software or results in your research, please cite it as below."
+authors:
+  - family-names: "K S"
+    given-names: "Ganeshvar"
+    affiliation: "School of Computer Science, Vellore Institute of Technology, Chennai, India"
+  - family-names: "Siddaarth"
+    given-names: "Sai"
+    affiliation: "School of Computer Science, Vellore Institute of Technology, Chennai, India"
+  - family-names: "Maheshwari"
+    given-names: "Uma"
+    affiliation: "School of Computer Science, Vellore Institute of Technology, Chennai, India"
+title: "When Is Algorithm Selection Worth the Cost? An Overhead-Aware Study of Exact Shortest-Path Computation"
+version: 1.0.0
+date-released: 2026-10-04
+url: "https://github.com/ganeshvar/oa-assp"
+preferred-citation:
+  type: conference-paper
+  authors:
+    - family-names: "K S"
+      given-names: "Ganeshvar"
+    - family-names: "Siddaarth"
+      given-names: "Sai"
+    - family-names: "Maheshwari"
+      given-names: "Uma"
+  title: "When Is Algorithm Selection Worth the Cost? An Overhead-Aware Study of Exact Shortest-Path Computation"
+  year: 2026

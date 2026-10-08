@@ -1,0 +1,6 @@
+Q,SBS,Adaptive,VBS,Adaptive-SBS,Adaptive/SBS,GapClosed,BreakEven
+Q=1,0.635,5.710,0.629,5.075,8.988,-831.9128,not_observed
+Q=10,9.459,14.746,8.987,5.287,1.559,-11.1940,not_observed
+Q=50,52.583,58.582,47.945,5.998,1.114,-1.2934,not_observed
+Q=100,106.353,113.366,97.542,7.013,1.066,-0.7958,not_observed
+Q=500,564.114,577.498,513.424,13.385,1.024,-0.2640,not_observed

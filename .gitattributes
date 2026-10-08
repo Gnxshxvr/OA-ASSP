@@ -1,0 +1,7 @@
+# Frozen-artifact integrity depends on exact file bytes: every authoritative artifact is
+# SHA-256 hashed. Git's default line-ending normalization would rewrite LF<->CRLF on
+# checkout and silently invalidate every hash in LOCK_CHECKSUMS.txt,
+# checksums.txt, checksums_original_before.txt and SOURCE_PROVENANCE_MANIFEST.json.
+#
+# Disable all text conversion so the bytes on disk are exactly the bytes in the index.
+* -text

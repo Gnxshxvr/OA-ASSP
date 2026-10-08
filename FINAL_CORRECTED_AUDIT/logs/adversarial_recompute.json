@@ -1,0 +1,529 @@
+[
+ {
+  "quantity": "48 graphs",
+  "reported": 48,
+  "recomputed": 48,
+  "diff": 0,
+  "pass": true
+ },
+ {
+  "quantity": "algorithms",
+  "reported": [
+   "A*",
+   "Bidirectional Dijkstra",
+   "Dijkstra"
+  ],
+  "recomputed": [
+   "A*",
+   "Bidirectional Dijkstra",
+   "Dijkstra"
+  ],
+  "diff": null,
+  "pass": true
+ },
+ {
+  "quantity": "split sizes (32/8/8)",
+  "reported": "32/8/8",
+  "recomputed": "32/8/8",
+  "diff": null,
+  "pass": true
+ },
+ {
+  "quantity": "test graph count",
+  "reported": 8,
+  "recomputed": 8,
+  "diff": 0,
+  "pass": true
+ },
+ {
+  "quantity": "distinct (graph,query) pairs",
+  "reported": 24000,
+  "recomputed": 24000,
+  "diff": 0,
+  "pass": true
+ },
+ {
+  "quantity": "rows = pairs x 3 algorithms",
+  "reported": 72000,
+  "recomputed": 72000,
+  "diff": 0,
+  "pass": true
+ },
+ {
+  "quantity": "queries per graph = 500",
+  "reported": true,
+  "recomputed": true,
+  "diff": null,
+  "pass": true
+ },
+ {
+  "quantity": "adaptive raw rows = 3 tiers x 3 passes x 8 graphs x 500 (library)",
+  "reported": 36000,
+  "recomputed": 36000,
+  "diff": 0,
+  "pass": true
+ },
+ {
+  "quantity": "compiled pass-total rows (8 graphs x 3 passes)",
+  "reported": 24,
+  "recomputed": 24,
+  "diff": 0,
+  "pass": true
+ },
+ {
+  "quantity": "compiled_mode rows (8 graphs x 5 Q)",
+  "reported": 40,
+  "recomputed": 40,
+  "diff": 0,
+  "pass": true
+ },
+ {
+  "quantity": "timeouts reported as success/valid",
+  "reported": 0,
+  "recomputed": 0,
+  "diff": 0,
+  "pass": true
+ },
+ {
+  "quantity": "invalid rows without failure_reason",
+  "reported": 0,
+  "recomputed": 0,
+  "diff": 0,
+  "pass": true
+ },
+ {
+  "quantity": "A* rows with inadmissible heuristic excluded from oracle",
+  "reported": 16000,
+  "recomputed": 16000,
+  "diff": 0,
+  "pass": true
+ },
+ {
+  "quantity": "inadmissible-A* rows nonetheless correct",
+  "reported": 16000,
+  "recomputed": 16000,
+  "diff": 0,
+  "pass": true
+ },
+ {
+  "quantity": "geometric A* rows admissible",
+  "reported": true,
+  "recomputed": true,
+  "diff": null,
+  "pass": true
+ },
+ {
+  "quantity": "oracle-eligible == valid&correct&!timeout&(admissible or non-A*)",
+  "reported": true,
+  "recomputed": true,
+  "diff": null,
+  "pass": true
+ },
+ {
+  "quantity": "FINDING: A* oracle-eligibility asymmetry",
+  "reported": "not reported",
+  "recomputed": 16000,
+  "diff": null,
+  "pass": false,
+  "note": "16000 of 24000 A* rows excluded from oracle eligibility (inadmissible euclidean heuristic on random/scale-free graphs), yet all 16000 returned correct distances. Fixed-policy comparisons therefore run over different query sets unless restricted to eligible rows; A* is effectively excluded from SBS/VBS on 2 of 3 families."
+ },
+ {
+  "quantity": "SBS policy (argmin eligible train totals; cross-checked on geometric-only and all-rows subsets below)",
+  "reported": "Bidirectional Dijkstra",
+  "recomputed": "A*",
+  "diff": null,
+  "pass": false
+ },
+ {
+  "quantity": "SBS Bidi train total ~ 3.670822 s",
+  "reported": 3.670822,
+  "recomputed": 3.670822,
+  "diff": 0.0,
+  "pass": true
+ },
+ {
+  "quantity": "SBS also argmin on the geometric-only subset",
+  "reported": "Bidirectional Dijkstra",
+  "recomputed": "Bidirectional Dijkstra",
+  "diff": null,
+  "pass": true
+ },
+ {
+  "quantity": "FINDING: SBS disclosure: per-algorithm row sets differ under eligibility rule",
+  "reported": "not reported",
+  "recomputed": "row_set_asymmetry",
+  "diff": null,
+  "pass": false,
+  "note": "the manifest's fixed-policy training totals sum A* over its 5,000 eligible (geometric) rows but Bidi/Dijkstra over 16,000 rows; the printed totals are not same-query-set comparable (A* 2.552 s / 5k rows vs Bidi 3.671 s / 16k rows). On identical query sets Bidi is argmin everywhere (all-rows 3.671 s vs A* 7.645 s; geometric-only Bidi 1.609 s vs A* 2.552 s), so the SBS identity is robust, but any manuscript must reproduce the totals on a common query set."
+ },
+ {
+  "quantity": "Q=1 C_SBS (ms)",
+  "reported": 1.362,
+  "recomputed": 1.3619999517686665,
+  "diff": -4.8231333593662384e-08,
+  "pass": true
+ },
+ {
+  "quantity": "Q=1 C_VBS (ms)",
+  "reported": 1.35,
+  "recomputed": 1.3500999775715172,
+  "diff": 9.997757151714026e-05,
+  "pass": true
+ },
+ {
+  "quantity": "Q=1 OracleGap (ms)",
+  "reported": 0.012,
+  "recomputed": 0.011899974197149277,
+  "diff": -0.00010002580285072352,
+  "pass": false
+ },
+ {
+  "quantity": "Q=10 C_SBS (ms)",
+  "reported": 22.775,
+  "recomputed": 22.774700133595616,
+  "diff": -0.00029986640438295353,
+  "pass": true
+ },
+ {
+  "quantity": "Q=10 C_VBS (ms)",
+  "reported": 20.016,
+  "recomputed": 20.015900256112218,
+  "diff": -9.974388778033472e-05,
+  "pass": true
+ },
+ {
+  "quantity": "Q=10 OracleGap (ms)",
+  "reported": 2.759,
+  "recomputed": 2.7587998774833977,
+  "diff": -0.00020012251660217473,
+  "pass": true
+ },
+ {
+  "quantity": "Q=50 C_SBS (ms)",
+  "reported": 108.448,
+  "recomputed": 108.44759980682284,
+  "diff": -0.0004001931771568934,
+  "pass": true
+ },
+ {
+  "quantity": "Q=50 C_VBS (ms)",
+  "reported": 94.738,
+  "recomputed": 94.73800042178482,
+  "diff": 4.217848186272022e-07,
+  "pass": true
+ },
+ {
+  "quantity": "Q=50 OracleGap (ms)",
+  "reported": 13.71,
+  "recomputed": 13.709599385038018,
+  "diff": -0.00040061496198262603,
+  "pass": true
+ },
+ {
+  "quantity": "Q=100 C_SBS (ms)",
+  "reported": 223.777,
+  "recomputed": 223.7765999743715,
+  "diff": -0.0004000256284939496,
+  "pass": true
+ },
+ {
+  "quantity": "Q=100 C_VBS (ms)",
+  "reported": 198.342,
+  "recomputed": 198.34160065511242,
+  "diff": -0.00039934488759740816,
+  "pass": true
+ },
+ {
+  "quantity": "Q=100 OracleGap (ms)",
+  "reported": 25.435,
+  "recomputed": 25.434999319259077,
+  "diff": -6.807409214104609e-07,
+  "pass": true
+ },
+ {
+  "quantity": "Q=500 C_SBS (ms)",
+  "reported": 1064.2,
+  "recomputed": 1064.2001990927383,
+  "diff": 0.0001990927382848895,
+  "pass": true
+ },
+ {
+  "quantity": "Q=500 C_VBS (ms)",
+  "reported": 941.677,
+  "recomputed": 941.6772985714488,
+  "diff": 0.0002985714487522273,
+  "pass": true
+ },
+ {
+  "quantity": "Q=500 OracleGap (ms)",
+  "reported": 122.523,
+  "recomputed": 122.52290052128956,
+  "diff": -9.94787104389161e-05,
+  "pass": true
+ },
+ {
+  "quantity": "Q=1 adaptive task library (ms)",
+  "reported": 11.452,
+  "recomputed": 11.451900063548237,
+  "diff": -9.993645176287203e-05,
+  "pass": true
+ },
+ {
+  "quantity": "Q=1 adaptive task compiled (ms)",
+  "reported": 10.017,
+  "recomputed": 10.047799965832382,
+  "diff": 0.03079996583238298,
+  "pass": true
+ },
+ {
+  "quantity": "Q=10 adaptive task library (ms)",
+  "reported": 42.184,
+  "recomputed": 42.18360030790791,
+  "diff": -0.000399692092088344,
+  "pass": true
+ },
+ {
+  "quantity": "Q=10 adaptive task compiled (ms)",
+  "reported": 32.536,
+  "recomputed": 32.512400415726006,
+  "diff": -0.023599584273995333,
+  "pass": true
+ },
+ {
+  "quantity": "Q=50 adaptive task library (ms)",
+  "reported": 161.211,
+  "recomputed": 161.21110058156773,
+  "diff": 0.00010058156772174698,
+  "pass": true
+ },
+ {
+  "quantity": "Q=50 adaptive task compiled (ms)",
+  "reported": 121.371,
+  "recomputed": 121.42540147760883,
+  "diff": 0.054401477608834625,
+  "pass": true
+ },
+ {
+  "quantity": "Q=100 adaptive task library (ms)",
+  "reported": 328.12,
+  "recomputed": 328.1201011268422,
+  "diff": 0.0001011268421962086,
+  "pass": true
+ },
+ {
+  "quantity": "Q=100 adaptive task compiled (ms)",
+  "reported": 241.809,
+  "recomputed": 241.84650171082467,
+  "diff": 0.03750171082467091,
+  "pass": true
+ },
+ {
+  "quantity": "Q=500 adaptive task library (ms)",
+  "reported": 1556.25,
+  "recomputed": 1556.2499003717676,
+  "diff": -9.962823241949081e-05,
+  "pass": true
+ },
+ {
+  "quantity": "Q=500 adaptive task compiled (ms)",
+  "reported": 1119.706,
+  "recomputed": 1119.7232052800246,
+  "diff": 0.017205280024654712,
+  "pass": true
+ },
+ {
+  "quantity": "SelectionOverhead library Q=500 ~ 472.044 ms",
+  "reported": 472.044,
+  "recomputed": 472.0397015917115,
+  "diff": -0.004298408288491373,
+  "pass": true
+ },
+ {
+  "quantity": "RequiredCapture library Q=500 = SelOverhead/Gap",
+  "reported": 3.85,
+  "recomputed": 3.852665090226867,
+  "diff": 0.002665090226866784,
+  "pass": true
+ },
+ {
+  "quantity": "RequiredCapture compiled Q=500",
+  "reported": 0.29,
+  "recomputed": 0.2898479088307066,
+  "diff": -0.00015209116929337796,
+  "pass": true
+ },
+ {
+  "quantity": "selector choices deterministic across passes",
+  "reported": true,
+  "recomputed": true,
+  "diff": null,
+  "pass": true
+ },
+ {
+  "quantity": "selected-solver benchmark-median total Q=500 ~ 1084.210 ms",
+  "reported": 1084.21,
+  "recomputed": 1084.210198780056,
+  "diff": 0.00019878005605278304,
+  "pass": true
+ },
+ {
+  "quantity": "solver-only capture Q=500",
+  "reported": -0.163,
+  "recomputed": -0.16331640535918282,
+  "diff": -0.0003164053591828142,
+  "pass": true
+ },
+ {
+  "quantity": "CaptureRate library Q=500 = (SBS - Adaptive_task)/Gap",
+  "reported": -4.02,
+  "recomputed": -4.0159814955860496,
+  "diff": 0.004018504413950019,
+  "pass": true
+ },
+ {
+  "quantity": "FINDING: solver-cost regime gap (benchmark-median vs in-loop single-shot)",
+  "reported": "not reported",
+  "recomputed": 699.9,
+  "diff": null,
+  "pass": false,
+  "note": "the same chosen-solver work measures 1084.2 ms as benchmark medians but ~699.9 ms as in-loop single-shot sums (library, tier 1) and 638.7 ms per compiled pass. Regime difference ~1.5x; 'analysis-grade' costs benchmark-median solver work with in-loop overheads by construction. This is a declared regime choice, but the manuscript must state that the headline adaptive/SBS comparison mixes measurement regimes and show the measured e2e variant alongside it."
+ },
+ {
+  "quantity": "library cells with adaptive < SBS",
+  "reported": 0,
+  "recomputed": 0,
+  "diff": 0,
+  "pass": true
+ },
+ {
+  "quantity": "smallest library loss ~ +0.378 ms",
+  "reported": 0.378,
+  "recomputed": 0.37750002229586244,
+  "diff": -0.0004999777041375664,
+  "pass": true
+ },
+ {
+  "quantity": "compiled cells nominally below SBS (of 40, conservative non-task variant)",
+  "reported": 4,
+  "recomputed": 4,
+  "diff": 0,
+  "pass": true
+ },
+ {
+  "quantity": "compiled largest nominal gain ~ -2.419 ms",
+  "reported": -2.419,
+  "recomputed": -2.4189974647015333,
+  "diff": 2.535298466721514e-06,
+  "pass": true
+ },
+ {
+  "quantity": "compiled cells below SBS under task variant (of 40)",
+  "reported": 3,
+  "recomputed": 3,
+  "diff": 0,
+  "pass": true
+ },
+ {
+  "quantity": "compiled aggregate pass-to-pass dispersion ~ 9.4%",
+  "reported": 9.4,
+  "recomputed": 9.401638473377469,
+  "diff": 0.0016384733774685856,
+  "pass": true
+ },
+ {
+  "quantity": "FINDING: compiled mode per-query rows absent from raw",
+  "reported": "not reported",
+  "recomputed": 24,
+  "diff": null,
+  "pass": false,
+  "note": "compiled-mode adaptive execution is recorded only as per-graph per-pass totals (24 rows) plus derived per-Q tables; per-query raw rows exist only for library mode. The compiled crossover-rejection relies on the 9.4% pass dispersion of the same aggregate, which we recompute exactly, but per-query compiled traces would be needed to locate where the 4 nominal wins arise."
+ },
+ {
+  "quantity": "component reconciliation residual < 10% (documented tolerance)",
+  "reported": true,
+  "recomputed": true,
+  "diff": null,
+  "pass": true
+ },
+ {
+  "quantity": "historical cell scalefree_V80_D6_s138 Q=500 now positive-loss",
+  "reported": true,
+  "recomputed": true,
+  "diff": null,
+  "pass": true
+ },
+ {
+  "quantity": "bootstrap point ~ 0.492 s",
+  "reported": 0.492,
+  "recomputed": 0.49204970127902925,
+  "diff": 4.970127902925725e-05,
+  "pass": true
+ },
+ {
+  "quantity": "bootstrap point matches frozen table",
+  "reported": 0.49204970127902925,
+  "recomputed": 0.49204970127902925,
+  "diff": 0.0,
+  "pass": true
+ },
+ {
+  "quantity": "FINDING: majority baseline = test-set majority (72.60%)",
+  "reported": "not reported",
+  "recomputed": "test_set_population",
+  "diff": null,
+  "pass": false,
+  "note": "the majority-label baseline is computed on the test split (Bidi 72.60%); over all 48 graphs the Bidi winner share is 74.0%. Both are correct in their own population; the manuscript must state which population each number refers to."
+ },
+ {
+  "quantity": "majority share on test set ~ 72.6%",
+  "reported": 0.726,
+  "recomputed": 0.726,
+  "diff": 0.0,
+  "pass": true
+ },
+ {
+  "quantity": "majority share over all 48 graphs ~ 74.0%",
+  "reported": 0.74,
+  "recomputed": 0.7400416666666667,
+  "diff": 4.166666666671759e-05,
+  "pass": true
+ },
+ {
+  "quantity": "FINDING: geometric cells have exploitable mixed structure",
+  "reported": "not reported",
+  "recomputed": "constant_cells=0/24, geo_majority_shares=[46, 50, 50, 52, 52, 56, 60, 66]",
+  "diff": null,
+  "pass": false,
+  "note": "per-cell winner shares: random/scale-free cells are 67-97% Bidirectional Dijkstra (single solver dominates), but geometric cells are mixed (majority share 38-67% with 6-20% A* wins) - the structure a selector should exploit exists, and the tree leaves it on the table (LOCO median lift 0.00 pp). The majority baseline is unusually strong in this portfolio, which caps the achievable lift and must be discussed as a portfolio/scale limitation."
+ },
+ {
+  "quantity": "FINDING: noise floor vs claimable effects",
+  "reported": "not reported",
+  "recomputed": 16.32,
+  "diff": null,
+  "pass": false,
+  "note": "per-row solver median IQR is up to 434.5% of the median; the aggregate pass dispersion is 16.3% (library) and 9.4% (compiled). Any effect below ~10% of the same aggregate is inside the measurement floor; the rejected compiled 'wins' (max 0.23% of SBS) are ~40x below it. No sub-percent effect may be claimed anywhere in the paper."
+ },
+ {
+  "quantity": "original raw rows",
+  "reported": 72000,
+  "recomputed": 72000,
+  "diff": 0,
+  "pass": true
+ },
+ {
+  "quantity": "original SBS also Bidirectional Dijkstra (train-only)",
+  "reported": "Bidirectional Dijkstra",
+  "recomputed": "Bidirectional Dijkstra",
+  "diff": null,
+  "pass": true
+ },
+ {
+  "quantity": "FINDING: report transcription error at Q=1 (VBS)",
+  "reported": "not reported",
+  "recomputed": "Q1_VBS_mismatch",
+  "diff": null,
+  "pass": false,
+  "note": "corrected_audit_report.md section 5 states Q=1 VBS 1.362 ms and gap 0.012 ms; the frozen manifest and raw data give VBS 1.3501 ms (gap 0.0119 ms). Transcription typo in the report only; frozen tables are correct. Must be corrected in any manuscript."
+ }
+]

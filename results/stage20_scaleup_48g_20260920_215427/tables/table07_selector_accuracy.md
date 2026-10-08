@@ -1,0 +1,9 @@
+# Table07 Selector Accuracy
+
+| Metric | Value |
+| --- | --- |
+| Total Test Queries | 4000 |
+| Exact Selection Accuracy | 76.10% |
+| Near-Best Accuracy (ε=0.05) | 79.03% |
+| Mean Selection Time | 0.26 μs |
+| Mean Feature Time | 2.05 μs |

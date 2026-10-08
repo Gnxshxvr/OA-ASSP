@@ -1,0 +1,52 @@
+[
+ {
+  "check": "distance agreement with independent reference",
+  "pass": true,
+  "detail": "(142 pairs, 6 configs x 2 seeds; mismatches=0; unreachable pairs=0)"
+ },
+ {
+  "check": "reconstructed paths valid and weight-consistent",
+  "pass": true,
+  "detail": "(bad=0)"
+ },
+ {
+  "check": "operation counters sane (nonzero relaxations on reachable pairs)",
+  "pass": true,
+  "detail": "(bad=0)"
+ },
+ {
+  "check": "bidirectional exact on 120 random pairs (6 graphs)",
+  "pass": true,
+  "detail": "(errors=0)"
+ },
+ {
+  "check": "A* euclidean heuristic admissible on geometric graphs",
+  "pass": true,
+  "detail": "(viol=0)"
+ },
+ {
+  "check": "A* euclidean heuristic consistent on geometric graphs",
+  "pass": true,
+  "detail": "(viol=0)"
+ },
+ {
+  "check": "A* zero-heuristic equals plain semantics (same distances as Dijkstra-family)",
+  "pass": true,
+  "detail": "(mismatch=0)"
+ },
+ {
+  "check": "A* memoization: identical distances and expansion counts vs fresh closure",
+  "pass": true,
+  "detail": "(anomalies=0; unreachable pairs skipped=2)"
+ },
+ {
+  "check": "random-family A* exclusion is metadata-driven, not measured inadmissibility",
+  "pass": true,
+  "detail": "h(s,t) > d*(s,t) in 0/30 sampled pairs (weights 1..100 make euclidean usually admissible by accident); the pipeline excludes A* via the random weight model's heuristic_admissible=False flag, a conservative rule"
+ },
+ {
+  "check": "A* exclusion has no VBS effect on random/scale-free: A* is never the per-instance winner there (label audit: random/scale-free cells contain only Bidi/Dijkstra winners; A* wins 4.45% overall, all geometric)",
+  "pass": true,
+  "detail": ""
+ }
+]

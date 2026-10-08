@@ -1,0 +1,93 @@
+== loading raw data ==
+   benchmark rows=72000  adaptive rows=36000
+   [PASS] 48 graphs                                                reported=48                       recomputed=48
+   [PASS] algorithms                                               reported=['A*', 'Bidirectional Dijkstra', 'Dijkstra'] recomputed=['A*', 'Bidirectional Dijkstra', 'Dijkstra']
+   [PASS] split sizes (32/8/8)                                     reported='32/8/8'                 recomputed='32/8/8'
+   [PASS] test graph count                                         reported=8                        recomputed=8
+   [PASS] distinct (graph,query) pairs                             reported=24000                    recomputed=24000
+   [PASS] rows = pairs x 3 algorithms                              reported=72000                    recomputed=72000
+   [PASS] queries per graph = 500                                  reported=True                     recomputed=True
+   [PASS] adaptive raw rows = 3 tiers x 3 passes x 8 graphs x 500 (library) reported=36000                    recomputed=36000
+   [PASS] compiled pass-total rows (8 graphs x 3 passes)           reported=24                       recomputed=24
+   [PASS] compiled_mode rows (8 graphs x 5 Q)                      reported=40                       recomputed=40
+   [PASS] timeouts reported as success/valid                       reported=0                        recomputed=0
+   [PASS] invalid rows without failure_reason                      reported=0                        recomputed=0
+   [PASS] A* rows with inadmissible heuristic excluded from oracle reported=16000                    recomputed=16000
+   [PASS] inadmissible-A* rows nonetheless correct                 reported=16000                    recomputed=16000
+   [PASS] geometric A* rows admissible                             reported=True                     recomputed=True
+   [PASS] oracle-eligible == valid&correct&!timeout&(admissible or non-A*) reported=True                     recomputed=True
+   [FINDING] A* oracle-eligibility asymmetry: 16000 of 24000 A* rows excluded from oracle eligibility (inadmissible euclidean heuristic on random/scale-free graphs), yet all 16000 returned correct distances. Fixed-policy comparisons therefore run over different query sets unless restricted to eligible rows; A* is effectively excluded from SBS/VBS on 2 of 3 families.
+   train fixed-policy totals, eligible-rows rule: A*=2.551611, Bidirectional Dijkstra=3.670822, Dijkstra=6.703845
+   train fixed-policy totals, all-rows rule:      A*=7.645203, Bidirectional Dijkstra=3.670822, Dijkstra=6.703845
+   [FAIL] SBS policy (argmin eligible train totals; cross-checked on geometric-only and all-rows subsets below) reported='Bidirectional Dijkstra' recomputed='A*'
+   [PASS] SBS Bidi train total ~ 3.670822 s                        reported=3.67082                  recomputed=3.670822
+   train geometric-only totals (same 5,000-query set): A*=2.5516, Bidirectional Dijkstra=1.6092, Dijkstra=1.9206
+   [PASS] SBS also argmin on the geometric-only subset             reported='Bidirectional Dijkstra' recomputed='Bidirectional Dijkstra'
+   [FINDING] SBS disclosure: per-algorithm row sets differ under eligibility rule: the manifest's fixed-policy training totals sum A* over its 5,000 eligible (geometric) rows but Bidi/Dijkstra over 16,000 rows; the printed totals are not same-query-set comparable (A* 2.552 s / 5k rows vs Bidi 3.671 s / 16k rows). On identical query sets Bidi is argmin everywhere (all-rows 3.671 s vs A* 7.645 s; geometric-only Bidi 1.609 s vs A* 2.552 s), so the SBS identity is robust, but any manuscript must reproduce the totals on a common query set.
+   [PASS] Q=1 C_SBS (ms)                                           reported=1.362                    recomputed=1.36199995
+   [PASS] Q=1 C_VBS (ms)                                           reported=1.35                     recomputed=1.35009998
+   [FAIL] Q=1 OracleGap (ms)                                       reported=0.012                    recomputed=0.0118999742
+   [PASS] Q=10 C_SBS (ms)                                          reported=22.775                   recomputed=22.7747001
+   [PASS] Q=10 C_VBS (ms)                                          reported=20.016                   recomputed=20.0159003
+   [PASS] Q=10 OracleGap (ms)                                      reported=2.759                    recomputed=2.75879988
+   [PASS] Q=50 C_SBS (ms)                                          reported=108.448                  recomputed=108.4476
+   [PASS] Q=50 C_VBS (ms)                                          reported=94.738                   recomputed=94.7380004
+   [PASS] Q=50 OracleGap (ms)                                      reported=13.71                    recomputed=13.7095994
+   [PASS] Q=100 C_SBS (ms)                                         reported=223.777                  recomputed=223.7766
+   [PASS] Q=100 C_VBS (ms)                                         reported=198.342                  recomputed=198.341601
+   [PASS] Q=100 OracleGap (ms)                                     reported=25.435                   recomputed=25.4349993
+   [PASS] Q=500 C_SBS (ms)                                         reported=1064.2                   recomputed=1064.2002
+   [PASS] Q=500 C_VBS (ms)                                         reported=941.677                  recomputed=941.677299
+   [PASS] Q=500 OracleGap (ms)                                     reported=122.523                  recomputed=122.522901
+== adaptive task (library, tier 1): analysis-grade = benchmark chosen-solver + task overhead ==
+   [PASS] Q=1 adaptive task library (ms)                           reported=11.452                   recomputed=11.4519001
+   [PASS] Q=1 adaptive task compiled (ms)                          reported=10.017                   recomputed=10.0478
+   [PASS] Q=10 adaptive task library (ms)                          reported=42.184                   recomputed=42.1836003
+   [PASS] Q=10 adaptive task compiled (ms)                         reported=32.536                   recomputed=32.5124004
+   [PASS] Q=50 adaptive task library (ms)                          reported=161.211                  recomputed=161.211101
+   [PASS] Q=50 adaptive task compiled (ms)                         reported=121.371                  recomputed=121.425401
+   [PASS] Q=100 adaptive task library (ms)                         reported=328.12                   recomputed=328.120101
+   [PASS] Q=100 adaptive task compiled (ms)                        reported=241.809                  recomputed=241.846502
+   [PASS] Q=500 adaptive task library (ms)                         reported=1556.25                  recomputed=1556.2499
+   [PASS] Q=500 adaptive task compiled (ms)                        reported=1119.71                  recomputed=1119.72321
+   [PASS] SelectionOverhead library Q=500 ~ 472.044 ms             reported=472.044                  recomputed=472.039702
+   [PASS] RequiredCapture library Q=500 = SelOverhead/Gap          reported=3.85                     recomputed=3.85266509
+   [PASS] RequiredCapture compiled Q=500                           reported=0.29                     recomputed=0.289847909
+   [PASS] selector choices deterministic across passes             reported=True                     recomputed=True
+   [PASS] selected-solver benchmark-median total Q=500 ~ 1084.210 ms reported=1084.21                  recomputed=1084.2102
+   [PASS] solver-only capture Q=500                                reported=-0.163                   recomputed=-0.163316405
+   [PASS] CaptureRate library Q=500 = (SBS - Adaptive_task)/Gap    reported=-4.02                    recomputed=-4.0159815
+   [FINDING] solver-cost regime gap (benchmark-median vs in-loop single-shot): the same chosen-solver work measures 1084.2 ms as benchmark medians but ~699.9 ms as in-loop single-shot sums (library, tier 1) and 638.7 ms per compiled pass. Regime difference ~1.5x; 'analysis-grade' costs benchmark-median solver work with in-loop overheads by construction. This is a declared regime choice, but the manuscript must state that the headline adaptive/SBS comparison mixes measurement regimes and show the measured e2e variant alongside it.
+== crossover search ==
+   [PASS] library cells with adaptive < SBS                        reported=0                        recomputed=0
+   [PASS] smallest library loss ~ +0.378 ms                        reported=0.378                    recomputed=0.377500022
+   [PASS] compiled cells nominally below SBS (of 40, conservative non-task variant) reported=4                        recomputed=4
+   [PASS] compiled largest nominal gain ~ -2.419 ms                reported=-2.419                   recomputed=-2.41899746
+   [PASS] compiled cells below SBS under task variant (of 40)      reported=3                        recomputed=3
+   NOTE: analyzer reports the conservative (non-task) variant: 4 cells, largest -2.419 ms; the task variant gives 3 cells. Both are inside the 9.4% pass dispersion; the choice of variant must be stated in any manuscript.
+   compiled nominal winners: [('random_V80_D12_s108', '500', -2.419), ('geometric_V160_D6_s126', '500', -1.453), ('scalefree_V160_D12_s144', '50', -0.595), ('random_V40_D6_s102', '100', -0.054)]
+   [PASS] compiled aggregate pass-to-pass dispersion ~ 9.4%        reported=9.4                      recomputed=9.40163847
+   [FINDING] compiled mode per-query rows absent from raw: compiled-mode adaptive execution is recorded only as per-graph per-pass totals (24 rows) plus derived per-Q tables; per-query raw rows exist only for library mode. The compiled crossover-rejection relies on the 9.4% pass dispersion of the same aggregate, which we recompute exactly, but per-query compiled traces would be needed to locate where the 4 nominal wins arise.
+   library per-graph reconciliation residual: median=5.7% max=8.2%
+   [PASS] component reconciliation residual < 10% (documented tolerance) reported=True                     recomputed=True
+   [PASS] historical cell scalefree_V80_D6_s138 Q=500 now positive-loss reported=True                     recomputed=True
+   historical cell delta = +36.8355 ms (original claimed -0.0371 ms)
+== paired graph-level bootstrap replay (Q=500, tier1 library) ==
+   [PASS] bootstrap point ~ 0.492 s                                reported=0.492                    recomputed=0.492049701
+   replay CI [0.3900, 0.6143] vs frozen bootstrap_analysis_grade.csv
+   [PASS] bootstrap point matches frozen table                     reported=0.49205                  recomputed=0.492049701
+   [FINDING] majority baseline = test-set majority (72.60%): the majority-label baseline is computed on the test split (Bidi 72.60%); over all 48 graphs the Bidi winner share is 74.0%. Both are correct in their own population; the manuscript must state which population each number refers to.
+   [PASS] majority share on test set ~ 72.6%                       reported=0.726                    recomputed=0.726
+   [PASS] majority share over all 48 graphs ~ 74.0%                reported=0.74                     recomputed=0.740041667
+   cells (family,V,D) with constant per-instance winner: 0/24
+   geometric-cell majority shares: [46, 50, 50, 52, 52, 56, 60, 66] -> genuinely mixed labels
+   [FINDING] geometric cells have exploitable mixed structure: per-cell winner shares: random/scale-free cells are 67-97% Bidirectional Dijkstra (single solver dominates), but geometric cells are mixed (majority share 38-67% with 6-20% A* wins) - the structure a selector should exploit exists, and the tree leaves it on the table (LOCO median lift 0.00 pp). The majority baseline is unusually strong in this portfolio, which caps the achievable lift and must be discussed as a portfolio/scale limitation.
+   per-row relative IQR: median=14.39% p90=57.47% max=434.53%
+   library aggregate pass dispersion: 16.32%
+   [FINDING] noise floor vs claimable effects: per-row solver median IQR is up to 434.5% of the median; the aggregate pass dispersion is 16.3% (library) and 9.4% (compiled). Any effect below ~10% of the same aggregate is inside the measurement floor; the rejected compiled 'wins' (max 0.23% of SBS) are ~40x below it. No sub-percent effect may be claimed anywhere in the paper.
+   [PASS] original raw rows                                        reported=72000                    recomputed=72000
+   [PASS] original SBS also Bidirectional Dijkstra (train-only)    reported='Bidirectional Dijkstra' recomputed='Bidirectional Dijkstra'
+   [FINDING] report transcription error at Q=1 (VBS): corrected_audit_report.md section 5 states Q=1 VBS 1.362 ms and gap 0.012 ms; the frozen manifest and raw data give VBS 1.3501 ms (gap 0.0119 ms). Transcription typo in the report only; frozen tables are correct. Must be corrected in any manuscript.
+
+== ADVERSARIAL RECOMPUTATION: 63 PASS, 10 FAIL/FINDING ==
+   wrote C:\Users\varga\OneDrive\Desktop\DAA_PROJ\FINAL_CORRECTED_AUDIT\logs\adversarial_recompute.json

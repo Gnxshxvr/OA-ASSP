@@ -1,0 +1,7 @@
+# Table03 Operation Counts
+
+| Algorithm | Mean Edges Examined | Mean Relaxations | Mean Heap Pushes | Mean Heap Pops | Mean Nodes Expanded |
+| --- | --- | --- | --- | --- | --- |
+| Dijkstra | 245.1 | 73.1 | 74.1 | 36.0 | 30.8 |
+| Bidirectional Dijkstra | 124.1 | 63.9 | 65.9 | 16.4 | 15.6 |
+| A* | 224.5 | 69.6 | 70.6 | 31.9 | 27.3 |

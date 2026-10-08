@@ -1,0 +1,9 @@
+# Table06 Workload Crossover
+
+| Q | SBS | Adaptive | VBS | Adaptive-SBS | Adaptive/SBS | GapClosed | BreakEven |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Q=1 | 0.182 | 1.384 | 0.171 | 1.202 | 7.610 | -115.6084 | not_observed |
+| Q=10 | 1.801 | 2.977 | 1.533 | 1.176 | 1.653 | -4.3847 | not_observed |
+| Q=50 | 10.422 | 12.170 | 9.247 | 1.749 | 1.168 | -1.4883 | not_observed |
+| Q=100 | 19.661 | 21.532 | 17.401 | 1.872 | 1.095 | -0.8282 | not_observed |
+| Q=500 | 96.221 | 99.330 | 85.942 | 3.108 | 1.032 | -0.3024 | not_observed |
